@@ -1,0 +1,37 @@
+{
+  "name": "template-fullstack",
+  "version": "4.1.0",
+  "description": "project template for the React-Express-MySQL cursus in Wild Code School",
+  "homepage": "https://github.com/wildcodeschool/js-template-fullstack#readme",
+  "bugs": {
+    "url": "https://github.com/wildcodeschool/js-template-fullstack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildcodeschool/js-template-fullstack.git"
+  },
+  "config": {
+    "cli": "npm"
+  },
+  "scripts": {
+    "postinstall": "cross-env-shell \"husky install && cd ./frontend && $npm_package_config_cli install && cd ../backend && $npm_package_config_cli install\"",
+    "db:migrate": "cd ./backend && node migrate.js",
+    "db:seed": "cd ./backend && node seed.js",
+    "dev": "cross-env-shell 'concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"$npm_package_config_cli:dev-*\"'",
+    "dev-front": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run dev\"",
+    "dev-back": "cross-env-shell \"cd ./backend && $npm_package_config_cli run dev\"",
+    "lint": "lint-staged",
+    "prebuild": "$npm_package_config_cli install",
+    "build": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run build && cd ../backend && $npm_package_config_cli run build\"",
+    "start": "cross-env-shell \"cd ./backend && $npm_package_config_cli run start\""
+  },
+  "keywords": [],
+  "author": "Wild Code School",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3"
+  }
+}

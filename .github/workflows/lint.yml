@@ -1,0 +1,40 @@
+name: dev
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - dev
+
+jobs:
+  lint:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    permissions:
+      checks: write
+      contents: write
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install pnpm
+        run: npm -g install pnpm
+
+      - name: Set package.json config.cli
+        run: sed -i 's/.*"cli":.*/"cli":"pnpm"/' package.json
+
+      - name: Install package dependencies
+        run: pnpm install
+
+      - name: Run linters
+        run: npx lint-staged --diff="origin/${GITHUB_BASE_REF}...origin/${GITHUB_HEAD_REF}"
