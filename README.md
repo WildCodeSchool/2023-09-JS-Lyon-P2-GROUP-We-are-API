@@ -65,3 +65,8 @@ The backend subdomain will be automatically created with the suffix -backend.
 The global variable VITE_BACKEND_URL will be automatically created and pre-filled on the basis of this information.
 
 Use this same tab to add the other environment variables required for the project if any.
+ 
+ Notre project consiste à créer une application où l'utilsateur devra deviner le nom d'un film selon une photo donnée.
+ Il pourra alors rentrer sa réponse et l'app changera de photo si elle est correcte. 
+ Plus tard on pourra changer de difficulté ou de thème de questions.
+ Il y aura aussi plusieurs modes de jeux disponilbles
