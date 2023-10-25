@@ -1,11 +1,17 @@
 import "./App.css";
 import { useState } from "react";
 import Api from "./components/Api/Api";
+import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 
 function App() {
   const [film, setFilm] = useState();
 
-  return <Api film={film} setFilm={setFilm} />;
+  return (
+    <>
+      <Api setFilm={setFilm} />;
+      <LogicAnswers film={film} />
+    </>
+  );
 }
 
 export default App;
