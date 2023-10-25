@@ -6,7 +6,7 @@ export default function Answers({
   answers,
 }) {
   function check() {
-    if (answers === film.title) {
+    if (answers === film.title){
       setAnswersReturn(true);
       setScore(score + 1);
     } else {
