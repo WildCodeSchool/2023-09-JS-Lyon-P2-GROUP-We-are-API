@@ -8,7 +8,7 @@ function App() {
     title: "Le monde interdit",
   };
 
-  const [answers, setAnswers] = useState("Le monde inrdit");
+  const [answers, setAnswers] = useState("Le monde interdit");
   const [film, setFilm] = useState(movies);
   const [answersReturn, setAnswersReturn] = useState(0);
   let display = "";
