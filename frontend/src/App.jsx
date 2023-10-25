@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-import LogicAnswers from "./components/LogicAnswers/LogicAnswers.jsx";
-import Answers from "./components/Answers/Answers.jsx";
+import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
+import Answers from "./components/Answers/Answers";
+
 function App() {
   const movies = {
     adult: false,
@@ -105,6 +106,8 @@ function App() {
         answersReturn={answersReturn}
         setScore={setScore}
         score={score}
+        setFilm={setFilm}
+        setAnswers={setAnswers}
       />
 
       {answersReturn === true ? (

@@ -1,7 +1,7 @@
-export default function Api(props) {
+export default function Api({ setAnswersReturn }) {
   return (
     <div>
-      <button onClick={() => props.setAnswersReturn(0)}>next</button>
+      <button onClick={() => setAnswersReturn(0)}>next</button>
     </div>
   );
 }

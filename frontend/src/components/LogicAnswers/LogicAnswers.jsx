@@ -1,19 +1,24 @@
-import { useState, useEffect } from "react";
-export default function Answers(props) {
+export default function Answers({
+  film,
+  score,
+  setAnswersReturn,
+  setScore,
+  answers,
+}) {
   function check() {
-    if (props.answers === props.film.title) {
-      console.log("bravo");
-      props.setAnswersReturn(true);
-      props.setScore(props.score + 1);
+    if (answers === film.title) {
+      setAnswersReturn(true);
+      setScore(score + 1);
     } else {
-      props.setAnswersReturn(false);
-      console.log("try again");
+      setAnswersReturn(false);
     }
   }
 
   return (
     <div>
-      <button onClick={() => check()}>check</button>
+      <button type="button" onClick={() => check()}>
+        check
+      </button>
     </div>
   );
 }
