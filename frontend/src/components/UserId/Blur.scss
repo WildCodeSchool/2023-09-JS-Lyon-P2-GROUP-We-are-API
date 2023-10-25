@@ -1,0 +1,15 @@
+.blur-container {
+  position: relative;
+  filter: blur(6px);
+}
+.user-container {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
