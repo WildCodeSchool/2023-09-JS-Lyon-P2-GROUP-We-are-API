@@ -1,4 +1,6 @@
-export default function Answers({
+import propTypes from "prop-types";
+
+export default function LogicAnswers({
   film,
   score,
   setAnswersReturn,
@@ -6,7 +8,7 @@ export default function Answers({
   answers,
 }) {
   function check() {
-    if (answers === film.title){
+    if (answers === film.title) {
       setAnswersReturn(true);
       setScore(score + 1);
     } else {
@@ -22,3 +24,19 @@ export default function Answers({
     </div>
   );
 }
+
+LogicAnswers.propTypes = {
+  film: (propTypes.shape = {
+    title: propTypes.string.isRequired,
+  }),
+  score: propTypes.number.isRequired,
+  setAnswersReturn: propTypes.func.isRequired,
+  setScore: propTypes.func.isRequired,
+  answers: propTypes.string.isRequired,
+};
+
+LogicAnswers.defaultProps = {
+  film: {
+    title: "loading",
+  },
+};

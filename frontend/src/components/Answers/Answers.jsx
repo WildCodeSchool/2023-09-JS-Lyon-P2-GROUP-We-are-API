@@ -1,4 +1,6 @@
-export default function Api({ setAnswersReturn }) {
+import propTypes from "prop-types";
+
+export default function Answers({ setAnswersReturn }) {
   return (
     <div>
       <button type="button" onClick={() => setAnswersReturn(0)}>
@@ -7,3 +9,7 @@ export default function Api({ setAnswersReturn }) {
     </div>
   );
 }
+
+Answers.propTypes = {
+  setAnswersReturn: propTypes.func.isRequired,
+};
