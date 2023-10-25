@@ -1,16 +1,13 @@
 import "./App.css";
 import { useState } from "react";
+import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 
 function App() {
-  const movies = {
-    title: "Le monde interdit",
-  };
-
   const [answers, setAnswers] = useState("Le monde interdit");
-  const [film, setFilm] = useState(movies);
   const [answersReturn, setAnswersReturn] = useState(0);
+  const [film, setFilm] = useState();
   let display = "";
   const [score, setScore] = useState(0);
   if (answersReturn === false) {
@@ -18,6 +15,7 @@ function App() {
   }
   return (
     <div>
+      <Api film={film} setFilm={setFilm} />;
       <LogicAnswers
         answers={answers}
         film={film}
