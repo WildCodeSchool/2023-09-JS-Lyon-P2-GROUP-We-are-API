@@ -23,7 +23,7 @@
     background-size: cover;
     background-position: center center;
   }
-
+}
 .blur {
   position: relative;
   filter: blur(6px);
@@ -39,5 +39,4 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
-
 } /*# sourceMappingURL=App.module.css.map */
