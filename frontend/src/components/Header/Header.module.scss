@@ -1,34 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
 
-.theUser, .theScore {
-    font-family: "Sniglet";
-    font-size: 1.8em;
-    color: #202C55;
+.theUser,
+.theScore {
+  font-family: "Sniglet";            
+  font-size: 1.8em;
+  color: #202c55;
 }
 
 .header {
-      text-align: center;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .userAndScore {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 3rem;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3rem;
 }
 
 .logoText {
-      margin: 3rem;
-      margin-top: 4rem;
+  margin: 3rem;
+  margin-top: 4rem;
 }
 
-@media screen and (min-width: 480px) { 
-      .theUser, .theScore { 
-            margin-left: 5rem;
-            margin-right: 5rem;
-      } 
-    }
+@media screen and (min-width: 480px) {
+  .theUser,
+  .theScore {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}

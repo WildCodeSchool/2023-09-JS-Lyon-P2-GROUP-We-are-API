@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
-.theUser, .theScore {
+.theUser,
+.theScore {
   font-family: "Sniglet";
   font-size: 1.8em;
-  color: #202C55;
+  color: #202c55;
 }
 
 .header {
@@ -25,8 +26,9 @@
 }
 
 @media screen and (min-width: 480px) {
-  .theUser, .theScore {
+  .theUser,
+  .theScore {
     margin-left: 5rem;
     margin-right: 5rem;
   }
-}/*# sourceMappingURL=Header.module.css.map */
+} /*# sourceMappingURL=Header.module.css.map */
