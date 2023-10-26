@@ -1,7 +1,8 @@
-.blur-container {
+.blur {
   position: relative;
   filter: blur(6px);
 }
+
 .user-container {
   position: absolute;
   top: 0;
@@ -12,4 +13,4 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
-}
+} /*# sourceMappingURL=App.module.css.map */

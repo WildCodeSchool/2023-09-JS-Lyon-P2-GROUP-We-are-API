@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import UserId from "./components/UserId/UserId";
-import "./App.css";
-import "./components/UserId/Blur.scss";
+import "./App.module.css";
 
 function App() {
   // État local pour gérer le pseudo de l'utilisateur et l'activation du flou
@@ -16,19 +15,11 @@ function App() {
 
   return (
     <div>
-      <div className={`blur-container ${isBlurActive ? "blur" : ""}`}>
+      <div className={`user-container-app ${isBlurActive ? "blur" : ""}`}>
         {/* Partie principale de l'application */}
-        <div className="main-page">
-          <h1>Bienvenue, {userId} !</h1>
-          <img src="./dessert.png" alt="" />
-        </div>
       </div>
       {/* Affiche le composant UserId seulement si userId est null */}
-      {userId === null && (
-        <div className="user-container-app">
-          <UserId setStateUserId={handleUserIdEntered} />
-        </div>
-      )}
+      {userId === null ? <UserId setStateUserId={handleUserIdEntered} /> : null}
     </div>
   );
 }
