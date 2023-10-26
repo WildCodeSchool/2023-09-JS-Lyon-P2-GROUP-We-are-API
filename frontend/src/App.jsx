@@ -7,7 +7,7 @@ function App() {
   // État local pour gérer le pseudo de l'utilisateur et l'activation du flou
   const [userId, setUserId] = useState(null);
   const [isBlurActive, setBlurActive] = useState(true);
-    const [film, setFilm] = useState();
+  const [film, setFilm] = useState();
 
   // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
