@@ -31,3 +31,4 @@ src/components/UserId/UserId.css.map
 *.njsproj
 *.sln
 *.sw?
+**/*.map
