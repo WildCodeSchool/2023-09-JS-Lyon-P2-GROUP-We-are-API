@@ -12,12 +12,12 @@ export default function Image({ film }) {
   );
 }
 
-/*Image.defaultProps = {
+Image.defaultProps = {
   film: { title: "Veuillez attendre votre film" },
 };
 Image.propTypes = {
-  film: PropTypes.shape({
+  film: PropTypes.exact({
     title: PropTypes.string,
     backdrop_path: PropTypes.string,
   }),
-};*/
+};
