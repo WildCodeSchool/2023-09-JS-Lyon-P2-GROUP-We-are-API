@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-function Api({ film, setFilm }) {
+function Api({ setFilm, setAnswersReturn }) {
   useEffect(() => {
     const aleaPage = Math.floor(Math.random() * 10) + 1; // génère un nombre aléatoire entre 1 et 10 pour choisir aléatoirement une page lors du fetch
     const alea = Math.floor(Math.random() * 19); // génère un nombre aléatoire entre 0 et 19 pour choisir un seul film dans le fichier issu du fetch
@@ -12,17 +12,10 @@ function Api({ film, setFilm }) {
       const movieParsed = await movie.json();
       setFilm(movieParsed.results[alea]);
     })();
+    setAnswersReturn(false);
   }, []);
 
-  return (
-    <>
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
-        alt="Film a trouver"
-      />
-      <p>{film.title} </p>
-    </>
-  );
+  return <div>s</div>;
 }
 
 Api.defaultProps = {
@@ -30,6 +23,7 @@ Api.defaultProps = {
 };
 
 Api.propTypes = {
+  setAnswersReturn: PropTypes.func.isRequired,
   setFilm: PropTypes.func.isRequired,
   film: PropTypes.shape({
     title: PropTypes.string,
