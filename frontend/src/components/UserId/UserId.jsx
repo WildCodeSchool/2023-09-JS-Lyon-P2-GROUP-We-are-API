@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-function UserId() {}
-=======
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./UserId.module.css";
@@ -34,6 +31,4 @@ function UserId({ setStateUserId }) {
     </div>
   );
 }
->>>>>>> dev
-
 export default UserId;

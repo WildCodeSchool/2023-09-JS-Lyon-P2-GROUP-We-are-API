@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-function LogicAnswers() {}
-
-export default LogicAnswers;
-=======
 import propTypes from "prop-types";
 
 export default function LogicAnswers({
@@ -44,4 +39,3 @@ LogicAnswers.defaultProps = {
     title: "loading",
   },
 };
->>>>>>> dev
