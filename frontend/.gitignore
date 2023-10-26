@@ -13,6 +13,14 @@ dist-ssr
 *.local
 .env
 
+src/App.module.css.map
+src/components/Answers/Answers.css.map
+src/components/Api/Api.css.map
+src/components/Header/Header.css.map
+src/components/Image/Image.css.map
+src/components/LogicAnswers/LogicAnswers.css.map
+src/components/UserId/UserId.css.map
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

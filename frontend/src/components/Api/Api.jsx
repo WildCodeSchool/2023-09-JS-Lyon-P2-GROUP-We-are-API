@@ -17,10 +17,10 @@ function Api({ film, setFilm }) {
   return (
     <>
       <img
-        src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/w200/${film.backdrop_path}`}
         alt="Film a trouver"
       />
-      <p>{film.title} </p>
+      <p>{film.title}</p>
     </>
   );
 }
