@@ -5,6 +5,7 @@ import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
+import Header from "./components/Header/Header";
 
 function App() {
   const [answers, setAnswers] = useState("");
@@ -27,6 +28,7 @@ function App() {
       <div className={`user-container-app ${isBlurActive ? "blur" : ""}`}>
         {/* Partie principale de l'application */}
       </div>
+      <Header userId={userId} score={score} />
       {answersReturn === true ? (
         <Api
           film={film}
