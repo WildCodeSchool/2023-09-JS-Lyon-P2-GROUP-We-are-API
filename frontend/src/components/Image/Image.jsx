@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 export default function Image({ film }) {
   return (
@@ -12,12 +12,12 @@ export default function Image({ film }) {
   );
 }
 
-Image.defaultProps = {
+/*Image.defaultProps = {
   film: { title: "Veuillez attendre votre film" },
 };
 Image.propTypes = {
-  film: propTypes.shape({
-    title: propTypes.string,
-    backdrop_path: propTypes.string,
+  film: PropTypes.shape({
+    title: PropTypes.string,
+    backdrop_path: PropTypes.string,
   }),
-};
+};*/
