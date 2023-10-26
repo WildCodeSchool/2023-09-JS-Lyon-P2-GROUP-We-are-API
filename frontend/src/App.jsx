@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UserId from "./components/UserId/UserId";
-import "./App.module.css";
+import styles from "./App.module.css";
 import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={styles.appBody}>
       <div className={`user-container-app ${isBlurActive ? "blur" : ""}`}>
         {/* Partie principale de l'application */}
       </div>
