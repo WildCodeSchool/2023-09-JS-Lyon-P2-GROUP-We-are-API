@@ -1,15 +1,24 @@
 import propTypes from "prop-types";
 
-export default function Answers({ setAnswersReturn }) {
+export default function Answers({ setAnswers, setCheck }) {
+  const input = document.getElementById("response");
+  function value() {
+    setAnswers(input.value);
+    setCheck(true);
+  }
   return (
     <div>
-      <button type="button" onClick={() => setAnswersReturn(0)}>
-        next
+      <label htmlFor="Answers">Answers</label>
+      <input type="text" id="response" />
+      <button type="button" onClick={() => value()}>
+        test
       </button>
+      {}
     </div>
   );
 }
 
 Answers.propTypes = {
-  setAnswersReturn: propTypes.func.isRequired,
+  setAnswers: propTypes.func.isRequired,
+  setCheck: propTypes.func.isRequired,
 };

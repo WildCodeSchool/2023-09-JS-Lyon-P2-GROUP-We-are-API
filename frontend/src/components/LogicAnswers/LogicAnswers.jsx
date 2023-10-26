@@ -6,23 +6,20 @@ export default function LogicAnswers({
   setAnswersReturn,
   setScore,
   answers,
+  setCheck,
+  setPlease,
 }) {
-  function check() {
-    if (answers === film.title) {
-      setAnswersReturn(true);
-      setScore(score + 1);
-    } else {
-      setAnswersReturn(false);
-    }
+  if (answers === film.title) {
+    setAnswersReturn(true);
+    setScore(score + 1);
+    setPlease(false);
+  } else {
+    setAnswersReturn(false);
+    setPlease(true);
   }
+  setCheck(false);
 
-  return (
-    <div>
-      <button type="button" onClick={() => check()}>
-        check
-      </button>
-    </div>
-  );
+  return <div />;
 }
 
 LogicAnswers.propTypes = {
@@ -33,6 +30,8 @@ LogicAnswers.propTypes = {
   setAnswersReturn: propTypes.func.isRequired,
   setScore: propTypes.func.isRequired,
   answers: propTypes.string.isRequired,
+  setCheck: propTypes.func.isRequired,
+  setPlease: propTypes.func.isRequired,
 };
 
 LogicAnswers.defaultProps = {
