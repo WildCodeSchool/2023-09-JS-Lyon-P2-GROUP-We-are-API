@@ -15,7 +15,7 @@ function Header({ userId, score }) {
 }
 
 Header.propTypes = {
-  userId: PropTypes.string,
+  userId: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
 };
 
