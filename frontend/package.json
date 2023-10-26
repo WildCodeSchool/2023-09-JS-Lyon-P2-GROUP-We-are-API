@@ -8,11 +8,8 @@
   },
   "dependencies": {
     "prop-types": "^15.8.1",
-    "prettierC": "prettier -c",
-    "prettierW": "prettier -w",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
     "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
