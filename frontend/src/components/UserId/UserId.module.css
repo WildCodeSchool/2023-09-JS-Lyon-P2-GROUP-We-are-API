@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-container {
+  margin: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33vh;
+  height: 69vh;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #ffffff;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.user-Input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 30vh;
+  height: 5vh;
+  border-radius: 2vh;
+}
+
+.user-Message {
+  font-size: 4vh;
+  font-family: Montserrat;
+}
+
+.user-text {
+  margin: 0;
+}

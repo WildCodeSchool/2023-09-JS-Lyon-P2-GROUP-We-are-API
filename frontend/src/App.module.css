@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .appBody {
+    background-image: url("./src/assets/bouboulesMobile.png");
+    width: 100vw;
+    height: 100vh;
+    padding-top: 25%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media (min-width: 481px) {
+  .appBody {
+    background-image: url("./src/assets/bouboulesDesktop.png");
+    width: 100vw;
+    height: 100vh;
+    padding-top: 25%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+.blur {
+  position: relative;
+  filter: blur(6px);
+}
+
+.user-container {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
