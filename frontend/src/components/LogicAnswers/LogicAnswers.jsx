@@ -9,21 +9,7 @@ export default function LogicAnswers({
   setCheck,
   setPlease,
 }) {
-  // Convertir la réponse de l'utilisateur et le titre du film en minuscules pour ignorer la casse
-  const userAnswer = answers.toLowerCase();
-  const filmTitle = film.title.toLowerCase();
-
-  let isAnswerCorrect = true;
-
-  // Vérifier que chaque lettre du titre du film est présente dans la réponse de l'utilisateur
-  for (let i = 0; i < filmTitle.length; i += 1) {
-    if (userAnswer.indexOf(filmTitle[i]) === -1) {
-      isAnswerCorrect = false;
-      break;
-    }
-  }
-
-  if (isAnswerCorrect) {
+  if (answers.toLowerCase() === film.title.toLowerCase()) {
     setAnswersReturn(true);
     setScore(score + 1);
     setPlease(false);
