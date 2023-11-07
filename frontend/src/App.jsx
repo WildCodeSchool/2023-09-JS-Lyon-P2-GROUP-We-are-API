@@ -30,11 +30,7 @@ function App() {
       </div>
       <Header userId={userId} score={score} />
       {answersReturn === true ? (
-        <Api
-          film={film}
-          setFilm={setFilm}
-          setAnswersReturn={setAnswersReturn}
-        />
+        <Api setFilm={setFilm} setAnswersReturn={setAnswersReturn} />
       ) : null}
       {film ? <Image film={film} /> : <p>loading</p>}
       {check === true ? (
