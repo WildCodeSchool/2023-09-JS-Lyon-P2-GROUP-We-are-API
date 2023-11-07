@@ -6,6 +6,7 @@ import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
+import Timer from "./components/timer/Timer";
 
 function App() {
   const [answers, setAnswers] = useState("");
@@ -29,6 +30,7 @@ function App() {
         {/* Partie principale de l'application */}
       </div>
       <Header userId={userId} score={score} />
+      <Timer />
       {answersReturn === true ? (
         <Api
           film={film}
