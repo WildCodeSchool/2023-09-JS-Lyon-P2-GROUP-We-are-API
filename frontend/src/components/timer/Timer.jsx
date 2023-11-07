@@ -1,14 +1,14 @@
+import { useState } from "react";
+
 export default function Timer() {
-  let seconde = 10;
-  const time = document.getElementById("text");
+  const [seconde, setSeconde] = useState(10);
+
   function decompte() {
     setTimeout(() => {
       if (seconde <= 0) {
         return;
       }
-      seconde -= 1;
-      time.innerHTML = seconde;
-      decompte(seconde);
+      setSeconde(seconde - 1);
     }, 1000);
   }
   decompte(seconde);
