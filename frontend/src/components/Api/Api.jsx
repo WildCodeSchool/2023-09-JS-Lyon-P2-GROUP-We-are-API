@@ -15,15 +15,7 @@ function Api({ film, setFilm, setAnswersReturn }) {
     setAnswersReturn(false);
   }, []);
 
-  return (
-    <>
-      <img
-        src={`https://image.tmdb.org/t/p/w200/${film.backdrop_path}`}
-        alt="Film a trouver"
-      />
-      <p>{film.title}</p>
-    </>
-  );
+  return <></>;
 }
 
 Api.defaultProps = {

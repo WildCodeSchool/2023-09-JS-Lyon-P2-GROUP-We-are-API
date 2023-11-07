@@ -52,12 +52,7 @@ function App() {
           setPlease={setPlease}
         />
       ) : null}
-      <Answers
-        setAnswersReturn={setAnswersReturn}
-        answers={answers}
-        setAnswers={setAnswers}
-        setCheck={setCheck}
-      />
+      <Answers setAnswers={setAnswers} setCheck={setCheck} />
       {please === true ? <p>Please retry</p> : null}
       {userId === null ? <UserId setStateUserId={handleUserIdEntered} /> : null}
     </div>
