@@ -13,6 +13,8 @@ export default function LogicAnswers({
     setAnswersReturn(true);
     setScore(score + 1);
     setPlease(false);
+    // Enregistrer le nouveau score dans le localStorage
+    localStorage.setItem("score", (score + 1).toString());
   } else {
     setAnswersReturn(false);
     setPlease(true);

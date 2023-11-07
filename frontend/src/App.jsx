@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
@@ -22,6 +22,14 @@ function App() {
     setUserId(pseudo);
     setBlurActive(false);
   };
+
+  // Récupérer le score depuis le localStorage lors de l'initialisation du composant
+  useEffect(() => {
+    const savedScore = localStorage.getItem("score");
+    if (savedScore) {
+      setScore(parseInt(savedScore, 10));
+    }
+  }, []);
 
   return (
     <div className={styles.appBody}>
