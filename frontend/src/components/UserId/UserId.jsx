@@ -24,7 +24,7 @@ function UserId({ setStateUserId }) {
         <input
           type={styles.text}
           className={styles["user-Input"]}
-          placeholder="Choisir ton Pseudo s'il vous plait"
+          placeholder="Pseudo"
           onKeyDown={handleKeyDown}
         />
       </div>
