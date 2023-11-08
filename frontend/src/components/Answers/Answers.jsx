@@ -3,16 +3,17 @@ import styles from "./Answers.module.css";
 
 export default function Answers({ setAnswers, setCheck }) {
   const input = document.getElementById("response");
-  function value() {
+  function value(e) {
+    e.preventDefault();
     setAnswers(input.value);
     setCheck(true);
     input.value = "";
   }
   return (
     <div className={styles.appAnswer}>
-      <form onSubmit={() => value()}>
+      <form onSubmit={(e) => value(e)}>
         <input type="text" id="response" />
-        <button type="button" onClick={() => value()} name="Answers">
+        <button type="button" onClick={(e) => value(e)} name="Answers">
           TEST
         </button>
       </form>
