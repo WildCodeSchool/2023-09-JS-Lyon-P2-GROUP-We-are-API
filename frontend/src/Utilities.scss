@@ -1,0 +1,21 @@
+$fontSizeMain: 2.2rem;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@mixin backgroundStyle {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+@mixin font {
+  color: #7474D6;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: "Sniglet";
+}
