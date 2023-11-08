@@ -1,4 +1,5 @@
 import propTypes from "prop-types";
+import styles from "./Answers.module.css";
 
 export default function Answers({ setAnswers, setCheck }) {
   const input = document.getElementById("response");
@@ -9,12 +10,12 @@ export default function Answers({ setAnswers, setCheck }) {
     input.value = "";
   }
   return (
-    <div>
+    <div className={styles.appAnswer}>
       <form onSubmit={(e) => value(e)}>
-        <label htmlFor="Answers">Answers</label>
+        <label htmlFor="Answers">Answer:</label>
         <input type="text" id="response" />
         <button type="button" name="Answers">
-          test
+          TEST
         </button>
       </form>
     </div>
