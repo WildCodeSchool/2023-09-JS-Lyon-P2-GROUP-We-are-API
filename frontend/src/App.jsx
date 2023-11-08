@@ -6,6 +6,7 @@ import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
+import Timer from "./components/timer/Timer";
 
 function App() {
   const [answers, setAnswers] = useState("");
@@ -37,12 +38,9 @@ function App() {
         {/* Partie principale de l'application */}
       </div>
       <Header userId={userId} score={score} />
+      <Timer />
       {answersReturn === true ? (
-        <Api
-          film={film}
-          setFilm={setFilm}
-          setAnswersReturn={setAnswersReturn}
-        />
+        <Api setFilm={setFilm} setAnswersReturn={setAnswersReturn} />
       ) : null}
       {film ? <Image film={film} /> : <p>loading</p>}
       {check === true ? (
@@ -60,12 +58,7 @@ function App() {
           setPlease={setPlease}
         />
       ) : null}
-      <Answers
-        setAnswersReturn={setAnswersReturn}
-        answers={answers}
-        setAnswers={setAnswers}
-        setCheck={setCheck}
-      />
+      <Answers setAnswers={setAnswers} setCheck={setCheck} />
       {please === true ? <p>Please retry</p> : null}
       {userId === null ? <UserId setStateUserId={handleUserIdEntered} /> : null}
     </div>
