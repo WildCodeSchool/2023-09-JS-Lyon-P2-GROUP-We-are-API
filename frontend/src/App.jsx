@@ -32,11 +32,7 @@ function App() {
       <Header userId={userId} score={score} />
       <Timer />
       {answersReturn === true ? (
-        <Api
-          film={film}
-          setFilm={setFilm}
-          setAnswersReturn={setAnswersReturn}
-        />
+        <Api setFilm={setFilm} setAnswersReturn={setAnswersReturn} />
       ) : null}
       {film ? <Image film={film} /> : <p>loading</p>}
       {check === true ? (
@@ -54,12 +50,7 @@ function App() {
           setPlease={setPlease}
         />
       ) : null}
-      <Answers
-        setAnswersReturn={setAnswersReturn}
-        answers={answers}
-        setAnswers={setAnswers}
-        setCheck={setCheck}
-      />
+      <Answers setAnswers={setAnswers} setCheck={setCheck} />
       {please === true ? <p>Please retry</p> : null}
       {userId === null ? <UserId setStateUserId={handleUserIdEntered} /> : null}
     </div>

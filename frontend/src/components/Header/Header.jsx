@@ -14,8 +14,12 @@ function Header({ userId, score }) {
   );
 }
 
+Header.defaultProps = {
+  userId: "",
+};
+
 Header.propTypes = {
-  userId: PropTypes.string.isRequired,
+  userId: PropTypes.string,
   score: PropTypes.number.isRequired,
 };
 
