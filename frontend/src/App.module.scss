@@ -71,3 +71,27 @@
     font-size: 2.5rem;
   }
 }
+.blur {
+  position: relative;
+  filter: blur(6px);
+}
+.user-container {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.avatar {
+  height: 5rem;
+}
+.Header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
