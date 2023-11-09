@@ -16,7 +16,7 @@
 }
 
 .titleMovie {
-  color: #7474D6;
+  color: #7474d6;
   text-align: center;
   font-size: 2.2rem;
   font-family: "Sniglet";
@@ -34,4 +34,4 @@
   .imgContainer {
     gap: 0rem;
   }
-}/*# sourceMappingURL=Image.module.css.map */
+}
