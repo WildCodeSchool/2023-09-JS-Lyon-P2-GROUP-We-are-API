@@ -63,3 +63,12 @@ body {
   font-size: 3rem;
   text-align: center;
 }
+
+@media screen and (min-width: 1200px) {
+  .user-Message {
+    font-size: 1.6rem;
+  }
+  .user-text {
+    font-size: 2.5rem;
+  }
+} /*# sourceMappingURL=UserId.module.css.map */
