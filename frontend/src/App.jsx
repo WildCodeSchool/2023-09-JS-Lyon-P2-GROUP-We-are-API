@@ -9,6 +9,7 @@ import Header from "./components/Header/Header";
 import Timer from "./components/timer/Timer";
 
 function App() {
+  const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [answers, setAnswers] = useState("");
   const [answersReturn, setAnswersReturn] = useState(true);
   // État local pour gérer le pseudo de l'utilisateur
@@ -28,7 +29,16 @@ function App() {
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
-          <Timer setNext={setNext} />
+          <div className={styles.divavatar}>
+            {selectedAvatar && (
+              <img
+                className={styles.avatar}
+                src={selectedAvatar}
+                alt="Avatar sélectionné"
+              />
+            )}
+          </div>
+          <Timer />
         </div>
         <div className={styles.appBody}>
           {answersReturn === true ? (
@@ -67,7 +77,10 @@ function App() {
             <p className={styles.retry}>Please retry</p>
           ) : null}
           {userId === null ? (
-            <UserId setStateUserId={handleUserIdEntered} />
+            <UserId
+              setStateUserId={handleUserIdEntered}
+              setAvatarSelected={setSelectedAvatar}
+            />
           ) : null}
         </div>
       </div>

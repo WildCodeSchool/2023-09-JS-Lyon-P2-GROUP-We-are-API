@@ -17,11 +17,12 @@ export default function Answers({
   // test
   return (
     <div className={styles.appAnswer}>
-      <label htmlFor="Answers">Answer:</label>
-      <input type="text" id="response" />
-      <button type="button" onClick={() => value()}>
-        TEST
-      </button>
+      <form onSubmit={() => value()}>
+        <input type="text" id="response" />
+        <button type="button" onClick={() => value()} name="Answers">
+          TEST
+        </button>
+      </form>
       {next ? <Next setAnswersReturn={setAnswersReturn} /> : null}
     </div>
   );
