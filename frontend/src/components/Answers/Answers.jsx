@@ -6,6 +6,7 @@ export default function Answers({ setAnswers, setCheck }) {
   function value() {
     setAnswers(input.value);
     setCheck(true);
+    input.value = "";
   }
   return (
     <div className={styles.appAnswer}>
