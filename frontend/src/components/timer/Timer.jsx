@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import styles from "./Timer.module.css";
 
-export default function Timer({ setAnswersReturn, score }) {
+export default function Timer() {
   const untime = 10000;
   const seconde = useRef(untime);
   const [progress, setProgress] = useState(0);
@@ -12,7 +12,6 @@ export default function Timer({ setAnswersReturn, score }) {
   }
 
   if (seconde.current > 0) {
-        console.log(progress)
     window.requestAnimationFrame(decompte);
     const getColor = () => {
       if (progress < 40) {

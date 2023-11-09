@@ -30,9 +30,7 @@ function App() {
         {/* Partie principale de l'application */}
       </div>
       <Header userId={userId} score={score} />
-      {answersReturn === false ? (
-        <Timer setAnswersReturn={setAnswersReturn} score={score} />
-      ) : null}
+      {answersReturn === false ? <Timer /> : null}
       {answersReturn === true ? (
         <Api setFilm={setFilm} setAnswersReturn={setAnswersReturn} />
       ) : null}
