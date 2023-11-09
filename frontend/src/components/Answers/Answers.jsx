@@ -1,7 +1,13 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import styles from "./Answers.module.css";
+import Next from "../Next/Next";
 
-export default function Answers({ setAnswers, setCheck }) {
+export default function Answers({
+  setAnswers,
+  setCheck,
+  next,
+  setAnswersReturn,
+}) {
   const input = document.getElementById("response");
   function value(e) {
     e.preventDefault();
@@ -9,6 +15,7 @@ export default function Answers({ setAnswers, setCheck }) {
     setCheck(true);
     input.value = "";
   }
+  // test
   return (
     <div className={styles.appAnswer}>
       <form onSubmit={(e) => value(e)}>
@@ -17,11 +24,14 @@ export default function Answers({ setAnswers, setCheck }) {
           TEST
         </button>
       </form>
+      {next ? <Next setAnswersReturn={setAnswersReturn} /> : null}
     </div>
   );
 }
 
 Answers.propTypes = {
-  setAnswers: propTypes.func.isRequired,
-  setCheck: propTypes.func.isRequired,
+  setAnswers: PropTypes.func.isRequired,
+  setCheck: PropTypes.func.isRequired,
+  next: PropTypes.bool.isRequired,
+  setAnswersReturn: PropTypes.func.isRequired,
 };

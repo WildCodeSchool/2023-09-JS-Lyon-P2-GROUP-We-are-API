@@ -9,6 +9,7 @@ export default function LogicAnswers({
   answers,
   setCheck,
   setPlease,
+  setNext,
 }) {
   function replace(string, arrayString, beforeReplace, afterReplace) {
     if (string.includes(beforeReplace)) {
@@ -35,7 +36,6 @@ export default function LogicAnswers({
     }
     return string;
   }
-
   function test(solution, response) {
     const lowerSolution = solution.toLowerCase();
     const lowerResponse = response.toLowerCase();
@@ -88,10 +88,10 @@ export default function LogicAnswers({
     return false;
   }
   useEffect(() => {
-    if (verify(film.title, answers)) {
-      setAnswersReturn(true);
+    if (verify(answers, film.title)) {
       setScore(score + 1);
       setPlease(false);
+      setNext(true);
     } else {
       setAnswersReturn(false);
       setPlease(true);
@@ -116,6 +116,7 @@ LogicAnswers.propTypes = {
     video: PropTypes.bool,
     vote_average: PropTypes.number,
     vote_count: PropTypes.number,
+    setNext: PropTypes.func.isRequired,
   }),
   score: PropTypes.number.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,
