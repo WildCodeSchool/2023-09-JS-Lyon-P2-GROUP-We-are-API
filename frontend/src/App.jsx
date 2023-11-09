@@ -17,6 +17,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [check, setCheck] = useState(false);
   const [please, setPlease] = useState(false);
+  const [next, setNext] = useState(false);
   // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
@@ -35,6 +36,7 @@ function App() {
               film={film}
               setFilm={setFilm}
               setAnswersReturn={setAnswersReturn}
+              setNext={setNext}
             />
           ) : null}
           {film ? <Image film={film} /> : <p>loading</p>}
@@ -51,6 +53,7 @@ function App() {
               Api={<Api />}
               setCheck={setCheck}
               setPlease={setPlease}
+              setNext={setNext}
             />
           ) : null}
           <Answers
@@ -58,6 +61,7 @@ function App() {
             answers={answers}
             setAnswers={setAnswers}
             setCheck={setCheck}
+            next={next}
           />
           {please === true ? (
             <p className={styles.retry}>Please retry</p>

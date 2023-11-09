@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
@@ -9,6 +10,7 @@ export default function LogicAnswers({
   answers,
   setCheck,
   setPlease,
+  setNext,
 }) {
   function replace(string, arrayString, beforeReplace, afterReplace) {
     if (string.includes(beforeReplace)) {
@@ -89,9 +91,9 @@ export default function LogicAnswers({
   }
   useEffect(() => {
     if (verify(answers, film.title)) {
-      setAnswersReturn(true);
       setScore(score + 1);
       setPlease(false);
+      setNext(true);
     } else {
       setAnswersReturn(false);
       setPlease(true);
@@ -116,6 +118,7 @@ LogicAnswers.propTypes = {
     video: PropTypes.bool,
     vote_average: PropTypes.number,
     vote_count: PropTypes.number,
+    setNext: propTypes.func.isRequired,
   }),
   score: PropTypes.number.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,

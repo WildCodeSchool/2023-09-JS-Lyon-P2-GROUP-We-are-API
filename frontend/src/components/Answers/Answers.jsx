@@ -1,7 +1,13 @@
 import propTypes from "prop-types";
 import styles from "./Answers.module.css";
+import Next from "../Next/Next";
 
-export default function Answers({ setAnswers, setCheck }) {
+export default function Answers({
+  setAnswers,
+  setCheck,
+  next,
+  setAnswersReturn,
+}) {
   const input = document.getElementById("response");
   function value() {
     setAnswers(input.value);
@@ -15,7 +21,7 @@ export default function Answers({ setAnswers, setCheck }) {
       <button type="button" onClick={() => value()}>
         TEST
       </button>
-      {}
+      {next ? <Next setAnswersReturn={setAnswersReturn} /> : null}
     </div>
   );
 }
@@ -23,4 +29,6 @@ export default function Answers({ setAnswers, setCheck }) {
 Answers.propTypes = {
   setAnswers: propTypes.func.isRequired,
   setCheck: propTypes.func.isRequired,
+  next: propTypes.bool.isRequired,
+  setAnswersReturn: propTypes.func.isRequired,
 };
