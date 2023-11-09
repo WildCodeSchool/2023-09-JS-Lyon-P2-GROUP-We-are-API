@@ -1,4 +1,5 @@
 import propTypes from "prop-types";
+import styles from "./Answers.module.css";
 
 export default function Answers({ setAnswers, setCheck }) {
   const input = document.getElementById("response");
@@ -8,11 +9,11 @@ export default function Answers({ setAnswers, setCheck }) {
     input.value = "";
   }
   return (
-    <div>
-      <label htmlFor="Answers">Answers</label>
+    <div className={styles.appAnswer}>
+      <label htmlFor="Answers">Answer:</label>
       <input type="text" id="response" />
       <button type="button" onClick={() => value()}>
-        test
+        TEST
       </button>
       {}
     </div>

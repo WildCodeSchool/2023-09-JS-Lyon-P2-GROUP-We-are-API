@@ -1,25 +1,20 @@
+@import "../../Utilities.scss";
+
 .imgContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   flex-direction: column;
   gap: 1rem;
 }
 
 .appImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   background-size: cover;
   width: 90%;
   height: 90%;
 }
 
 .titleMovie {
-  color: #7474d6;
-  text-align: center;
-  font-size: 2.2rem;
-  font-family: "Sniglet";
+  @include font;
   font-size: 2rem;
 }
 
@@ -28,9 +23,11 @@
     width: 40vw;
     margin-bottom: 4vh;
   }
+
   .titleMovie {
     margin-bottom: 3vh;
   }
+
   .imgContainer {
     gap: 0rem;
   }

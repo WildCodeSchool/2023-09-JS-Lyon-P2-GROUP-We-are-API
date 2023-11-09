@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
+import styles from "./Image.module.css";
 
 export default function Image({ film }) {
   return (
-    <div>
+    <div className={styles.imgContainer}>
       <img
+        className={styles.appImg}
         src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
         alt="Film a trouver"
       />
-      <p>{film.title} </p>
+      <p className={styles.titleMovie}>{film.title} </p>
     </div>
   );
 }
