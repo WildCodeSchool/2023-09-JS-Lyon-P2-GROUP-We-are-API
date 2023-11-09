@@ -13,7 +13,6 @@ function App() {
   const [answersReturn, setAnswersReturn] = useState(true);
   // État local pour gérer le pseudo de l'utilisateur et l'activation du flou
   const [userId, setUserId] = useState(null);
-  const [isBlurActive, setBlurActive] = useState(true);
   const [film, setFilm] = useState();
   const [score, setScore] = useState(0);
   const [check, setCheck] = useState(false);
@@ -21,7 +20,6 @@ function App() {
   // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
-    setBlurActive(false);
   };
 
   // Récupérer le score depuis le localStorage lors de l'initialisation du composant
@@ -34,9 +32,6 @@ function App() {
 
   return (
     <div className={styles.appBody}>
-      <div className={`user-container-app ${isBlurActive ? "blur" : ""}`}>
-        {/* Partie principale de l'application */}
-      </div>
       <Header userId={userId} score={score} />
       <Timer />
       {answersReturn === true ? (

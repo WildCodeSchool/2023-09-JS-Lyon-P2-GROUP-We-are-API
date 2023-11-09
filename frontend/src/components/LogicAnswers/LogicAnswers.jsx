@@ -20,8 +20,6 @@ export default function LogicAnswers({
     setPlease(true);
   }
   setCheck(false);
-
-  return <div />;
 }
 
 LogicAnswers.propTypes = {
