@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import styles from "./Answers.module.css";
 import Next from "../Next/Next";
 
@@ -27,8 +27,8 @@ export default function Answers({
 }
 
 Answers.propTypes = {
-  setAnswers: propTypes.func.isRequired,
-  setCheck: propTypes.func.isRequired,
-  next: propTypes.bool.isRequired,
-  setAnswersReturn: propTypes.func.isRequired,
+  setAnswers: PropTypes.func.isRequired,
+  setCheck: PropTypes.func.isRequired,
+  next: PropTypes.bool.isRequired,
+  setAnswersReturn: PropTypes.func.isRequired,
 };

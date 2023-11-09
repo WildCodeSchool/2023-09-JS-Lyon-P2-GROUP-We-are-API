@@ -28,7 +28,7 @@ function App() {
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
-          <Timer />
+          <Timer setNext={setNext} />
         </div>
         <div className={styles.appBody}>
           {answersReturn === true ? (

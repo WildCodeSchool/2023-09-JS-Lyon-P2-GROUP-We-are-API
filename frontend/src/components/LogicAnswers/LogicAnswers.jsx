@@ -101,7 +101,7 @@ export default function LogicAnswers({
   }, []);
 }
 
-LogicAnswers.PropTypes = {
+LogicAnswers.propTypes = {
   film: PropTypes.exact({
     title: PropTypes.string,
     backdrop_path: PropTypes.string,
