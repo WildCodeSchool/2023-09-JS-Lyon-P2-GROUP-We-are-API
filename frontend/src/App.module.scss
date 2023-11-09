@@ -40,6 +40,11 @@
   justify-content: center;
   z-index: 999;
 }
-.Header {
-  border: 3px solide red;
+.avatar {
+  border: 2px solid red;
+  height: 5rem;
+
+  .Header {
+    border: 30px solid red;
+  }
 }

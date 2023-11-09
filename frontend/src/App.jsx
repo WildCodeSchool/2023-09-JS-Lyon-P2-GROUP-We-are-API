@@ -25,10 +25,16 @@ function App() {
   return (
     <div className={styles.appBody}>
       <div className={styles.Header}>
-        <Header userId={userId} score={score} />
-        {selectedAvatar && (
-          <img src={selectedAvatar} alt="Avatar sélectionné" />
-        )}
+        <Header userId={userId} score={score} avatar={selectedAvatar} />
+        <div className={styles.divavatar}>
+          {selectedAvatar && (
+            <img
+              className={styles.avatar}
+              src={selectedAvatar}
+              alt="Avatar sélectionné"
+            />
+          )}
+        </div>
       </div>
       {answersReturn === true ? (
         <Api
