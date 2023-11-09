@@ -1,4 +1,4 @@
-$fontSizeMain: 2.2rem;
+$fontSizeMain: 2rem;
 
 @mixin flexCenter {
   display: flex;
@@ -16,6 +16,6 @@ $fontSizeMain: 2.2rem;
 @mixin font {
   color: #7474d6;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Sniglet";
 }

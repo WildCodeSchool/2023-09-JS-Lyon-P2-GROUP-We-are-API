@@ -90,6 +90,7 @@ export default function LogicAnswers({
   }
   useEffect(() => {
     if (verify(answers, film.title)) {
+
       setScore(score + 1);
       setPlease(false);
       setNext(true);

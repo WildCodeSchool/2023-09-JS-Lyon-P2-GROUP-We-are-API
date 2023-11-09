@@ -9,7 +9,8 @@ export default function Answers({
   setAnswersReturn,
 }) {
   const input = document.getElementById("response");
-  function value() {
+  function value(e) {
+    e.preventDefault();
     setAnswers(input.value);
     setCheck(true);
     input.value = "";
@@ -17,9 +18,9 @@ export default function Answers({
   // test
   return (
     <div className={styles.appAnswer}>
-      <form onSubmit={() => value()}>
+      <form onSubmit={(e) => value(e)}>
         <input type="text" id="response" />
-        <button type="button" onClick={() => value()} name="Answers">
+        <button type="button" onClick={(e) => value(e)} name="Answers">
           TEST
         </button>
       </form>
