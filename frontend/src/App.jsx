@@ -6,6 +6,7 @@ import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
+import Timer from "./components/timer/Timer";
 
 function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
@@ -36,6 +37,7 @@ function App() {
               />
             )}
           </div>
+          <Timer />
         </div>
         <div className={styles.appBody}>
           {answersReturn === true ? (
