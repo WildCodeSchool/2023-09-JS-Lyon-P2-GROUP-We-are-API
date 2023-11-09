@@ -1,0 +1,8 @@
+.avatar-list {
+  display: flex;
+}
+
+.img-avatar {
+  height: 3rem;
+  cursor: pointer;
+} /*# sourceMappingURL=Avatar.module.css.map */

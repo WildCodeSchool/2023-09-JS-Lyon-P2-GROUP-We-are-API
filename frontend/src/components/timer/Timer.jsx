@@ -1,16 +1,46 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import styles from "./Timer.module.css";
 
 export default function Timer() {
-  const [seconde, setSeconde] = useState(10);
+  const untime = 10000;
+  const seconde = useRef(untime);
+  const [progress, setProgress] = useState(0);
 
-  function decompte() {
-    setTimeout(() => {
-      if (seconde <= 0) {
-        return;
-      }
-      setSeconde(seconde - 1);
-    }, 1000);
+  function decompte(chrono) {
+    setProgress((chrono / untime) * 100);
+    seconde.current = Math.round((untime - chrono) / 1000);
   }
-  decompte(seconde);
-  return <div id="text">{seconde}</div>;
+
+  if (seconde.current > 0) {
+    window.requestAnimationFrame(decompte);
+    const getColor = () => {
+      if (progress < 40) {
+        return "#2ecc71";
+      }
+      if (progress < 70) {
+        return "#ffa500";
+      }
+      if (progress >= 70) {
+        return "#ff0000";
+      }
+      return "";
+    };
+    //   decompte(seconde);
+    return (
+      <div>
+        <div>{seconde.current}</div>
+        <div className={styles.container}>
+          <div className={styles.progressBar}>
+            <div
+              className={styles.fillBar}
+              style={{
+                width: `${progress}%`,
+                backgroundColor: getColor(),
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
