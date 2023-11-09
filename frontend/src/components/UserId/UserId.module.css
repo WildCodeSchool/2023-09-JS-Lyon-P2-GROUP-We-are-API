@@ -23,6 +23,10 @@ body {
 }
 
 .user-container {
+  margin: 18vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +47,10 @@ body {
   z-index: 999;
 }
 
+.user-container::before {
+  background-color: #000000;
+}
+
 .user-Input {
   margin-top: 10vh;
   background-color: #eee;
@@ -60,7 +68,7 @@ body {
 
 .user-text {
   margin: 0;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -71,4 +79,9 @@ body {
   .user-text {
     font-size: 2.5rem;
   }
-} /*# sourceMappingURL=UserId.module.css.map */
+  
+.Avatar {
+  margin: 2rem;
+  height: 10rem;
+  margin-left: 4rem;
+}

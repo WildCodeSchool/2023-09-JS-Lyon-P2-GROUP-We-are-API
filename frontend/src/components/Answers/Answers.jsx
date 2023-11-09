@@ -10,11 +10,12 @@ export default function Answers({ setAnswers, setCheck }) {
   }
   return (
     <div className={styles.appAnswer}>
-      <input type="text" id="response" />
-      <button type="button" onClick={() => value()}>
-        TEST
-      </button>
-      {}
+      <form onSubmit={() => value()}>
+        <input type="text" id="response" />
+        <button type="button" onClick={() => value()} name="Answers">
+          TEST
+        </button>
+      </form>
     </div>
   );
 }
