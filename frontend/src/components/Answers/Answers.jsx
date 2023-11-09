@@ -14,6 +14,7 @@ export default function Answers({
     setCheck(true);
     input.value = "";
   }
+  // test
   return (
     <div className={styles.appAnswer}>
       <label htmlFor="Answers">Answer:</label>
