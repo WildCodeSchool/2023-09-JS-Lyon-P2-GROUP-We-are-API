@@ -34,7 +34,11 @@ function App() {
       <Header userId={userId} score={score} />
       {answersReturn === false ? <Timer /> : null}
       {answersReturn === true ? (
-        <Api setFilm={setFilm} setAnswersReturn={setAnswersReturn} />
+        <Api
+          setFilm={setFilm}
+          setAnswersReturn={setAnswersReturn}
+          setNext={setNext}
+        />
       ) : null}
       {film ? <Image film={film} /> : <p>loading</p>}
       {check === true ? (

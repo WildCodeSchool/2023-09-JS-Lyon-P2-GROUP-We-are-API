@@ -28,4 +28,5 @@ export default function Answers({
 Answers.propTypes = {
   setAnswers: propTypes.func.isRequired,
   setCheck: propTypes.func.isRequired,
+  setAnswersReturn: propTypes.func.isRequired,
 };
