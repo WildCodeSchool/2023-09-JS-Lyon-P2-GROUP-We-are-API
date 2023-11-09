@@ -88,7 +88,7 @@ export default function LogicAnswers({
     return false;
   }
   useEffect(() => {
-    if (verify(answers, film.title)) {
+    if (verify(film.title, answers)) {
       setAnswersReturn(true);
       setScore(score + 1);
       setPlease(false);
