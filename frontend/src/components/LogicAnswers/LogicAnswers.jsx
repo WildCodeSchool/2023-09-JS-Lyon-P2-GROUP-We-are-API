@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useEffect } from "react";
 
 export default function LogicAnswers({
   film,
@@ -8,6 +9,7 @@ export default function LogicAnswers({
   answers,
   setCheck,
   setPlease,
+  setNext,
 }) {
   function replace(string, arrayString, beforeReplace, afterReplace) {
     if (string.includes(beforeReplace)) {
@@ -34,7 +36,6 @@ export default function LogicAnswers({
     }
     return string;
   }
-
   function test(solution, response) {
     const lowerSolution = solution.toLowerCase();
     const lowerResponse = response.toLowerCase();
@@ -86,17 +87,20 @@ export default function LogicAnswers({
     }
     return false;
   }
-  if (verify(answers, film.title)) {
-    setAnswersReturn(true);
-    setScore(score + 1);
-    setPlease(false);
-    // Enregistrer le nouveau score dans le localStorage
-    localStorage.setItem("score", (score + 1).toString());
-  } else {
-    setAnswersReturn(false);
-    setPlease(true);
-  }
-  setCheck(false);
+
+  useEffect(() => {
+    if (verify(film.title, answers)) {
+      setScore(score + 1);
+      setPlease(false);
+      setNext(true);
+      // Enregistrer le nouveau score dans le localStorage
+      localStorage.setItem("score", (score + 1).toString());
+    } else {
+      setAnswersReturn(false);
+      setPlease(true);
+    }
+    setCheck(false);
+  }, []);
 }
 
 LogicAnswers.propTypes = {
@@ -115,6 +119,7 @@ LogicAnswers.propTypes = {
     video: PropTypes.bool,
     vote_average: PropTypes.number,
     vote_count: PropTypes.number,
+    setNext: PropTypes.func.isRequired,
   }),
   score: PropTypes.number.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,

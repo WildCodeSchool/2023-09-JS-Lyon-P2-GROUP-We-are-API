@@ -40,7 +40,7 @@
 .retry {
   color: #7474d6;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Sniglet";
 }
 
@@ -67,6 +67,7 @@
   }
   .appHeader {
     width: 50vw;
+    margin: 0;
   }
   .appBody {
     width: 50vw;
@@ -74,7 +75,7 @@
     margin-bottom: 5vh;
   }
   .retry {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
 }
 .blur {
@@ -103,4 +104,4 @@
   flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
-} /*# sourceMappingURL=App.module.css.map */
+}
