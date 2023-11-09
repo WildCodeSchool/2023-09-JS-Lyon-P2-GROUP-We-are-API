@@ -7,6 +7,7 @@ import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
 import Timer from "./components/timer/Timer";
+import Next from "./components/Next/Next";
 
 function App() {
   const [answers, setAnswers] = useState("");
@@ -18,6 +19,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [check, setCheck] = useState(false);
   const [please, setPlease] = useState(false);
+  const [next, setNext] = useState(false);
   // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
@@ -48,9 +50,15 @@ function App() {
           Api={<Api />}
           setCheck={setCheck}
           setPlease={setPlease}
+          setNext={setNext}
         />
       ) : null}
-      <Answers setAnswers={setAnswers} setCheck={setCheck} />
+      <Answers
+        setAnswers={setAnswers}
+        setCheck={setCheck}
+        next={next}
+        setAnswersReturn={setAnswersReturn}
+      />
       {please === true ? <p>Please retry</p> : null}
       {userId === null ? <UserId setStateUserId={handleUserIdEntered} /> : null}
     </div>

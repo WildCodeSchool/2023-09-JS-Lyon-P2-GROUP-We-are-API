@@ -9,6 +9,7 @@ export default function LogicAnswers({
   answers,
   setCheck,
   setPlease,
+  setNext,
 }) {
   function replace(string, arrayString, beforeReplace, afterReplace) {
     if (string.includes(beforeReplace)) {
@@ -89,9 +90,10 @@ export default function LogicAnswers({
   }
   useEffect(() => {
     if (verify(answers, film.title)) {
-      setAnswersReturn(true);
+      //setAnswersReturn(true);
       setScore(score + 1);
       setPlease(false);
+      setNext(true);
     } else {
       setAnswersReturn(false);
       setPlease(true);
@@ -118,7 +120,7 @@ LogicAnswers.propTypes = {
     vote_count: PropTypes.number,
   }),
   score: PropTypes.number.isRequired,
-  setAnswersReturn: PropTypes.func.isRequired,
+  //setAnswersReturn: PropTypes.func.isRequired,
   setScore: PropTypes.func.isRequired,
   answers: PropTypes.string.isRequired,
   setCheck: PropTypes.func.isRequired,
