@@ -1,4 +1,3 @@
-import propTypes from "prop-types";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
@@ -102,7 +101,7 @@ export default function LogicAnswers({
   }, []);
 }
 
-LogicAnswers.propTypes = {
+LogicAnswers.PropTypes = {
   film: PropTypes.exact({
     title: PropTypes.string,
     backdrop_path: PropTypes.string,
@@ -118,7 +117,7 @@ LogicAnswers.propTypes = {
     video: PropTypes.bool,
     vote_average: PropTypes.number,
     vote_count: PropTypes.number,
-    setNext: propTypes.func.isRequired,
+    setNext: PropTypes.func.isRequired,
   }),
   score: PropTypes.number.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,
