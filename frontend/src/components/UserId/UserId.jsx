@@ -28,31 +28,33 @@ function UserId({ setStateUserId, setAvatarSelected }) {
   const avatarImages = [avatar1, avatar2, avatar3, avatar4];
 
   return (
-    <div className={styles["user-container"]}>
-      <div className={styles["user-Message"]} />
-      <AvatarPicker
-        selectedAvatar={selectedAvatar}
-        setSelectedAvatar={setSelectedAvatar}
-        avatarImages={avatarImages}
-        onAvatarSelected={handleAvatarSelected}
-      />
-      {selectedAvatar && (
-        <div>
-          <img
-            className={styles.Avatar}
-            src={selectedAvatar}
-            alt="Avatar sélectionné"
+    <div className={styles["blur-container"]}>
+      <div className={styles["user-container"]}>
+        <div className={styles["user-Message"]} />
+        <AvatarPicker
+          selectedAvatar={selectedAvatar}
+          setSelectedAvatar={setSelectedAvatar}
+          avatarImages={avatarImages}
+          onAvatarSelected={handleAvatarSelected}
+        />
+        {selectedAvatar && (
+          <div>
+            <img
+              className={styles.Avatar}
+              src={selectedAvatar}
+              alt="Avatar sélectionné"
+            />
+          </div>
+        )}
+        <div className={styles["user-pseudo"]}>
+          <h1 className={styles["user-text"]}>QUEL EST TON PSEUDO ?</h1>
+          <input
+            type="text"
+            className={styles["user-Input"]}
+            placeholder="Pseudo"
+            onKeyDown={handleKeyDown}
           />
         </div>
-      )}
-      <div className={styles["user-pseudo"]}>
-        <h1 className={styles["user-text"]}>QUEL EST TON PSEUDO ?</h1>
-        <input
-          type="text"
-          className={styles["user-Input"]}
-          placeholder="Pseudo"
-          onKeyDown={handleKeyDown}
-        />
       </div>
     </div>
   );
