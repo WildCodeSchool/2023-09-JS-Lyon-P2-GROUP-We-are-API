@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import { useState, useRef } from "react";
 import styles from "./Timer.module.css";
-import { useEffect } from "react";
 
 export default function Timer({ setNext }) {
   const untime = 10000;
@@ -32,7 +32,6 @@ export default function Timer({ setNext }) {
     return "";
   };
 
-  //   decompte(seconde);
   return (
     <div>
       <div>{seconde.current}</div>
@@ -50,3 +49,7 @@ export default function Timer({ setNext }) {
     </div>
   );
 }
+
+Timer.propTypes = {
+  setNext: PropTypes.func.isRequired,
+};
