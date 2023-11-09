@@ -36,7 +36,6 @@ export default function LogicAnswers({
     }
     return string;
   }
-
   function test(solution, response) {
     const lowerSolution = solution.toLowerCase();
     const lowerResponse = response.toLowerCase();
@@ -90,7 +89,6 @@ export default function LogicAnswers({
   }
   useEffect(() => {
     if (verify(answers, film.title)) {
-
       setScore(score + 1);
       setPlease(false);
       setNext(true);

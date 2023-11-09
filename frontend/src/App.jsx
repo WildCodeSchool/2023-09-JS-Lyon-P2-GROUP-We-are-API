@@ -38,7 +38,7 @@ function App() {
               />
             )}
           </div>
-          <Timer />
+          <Timer setNext={setNext} />
         </div>
         <div className={styles.appBody}>
           {answersReturn === true ? (
