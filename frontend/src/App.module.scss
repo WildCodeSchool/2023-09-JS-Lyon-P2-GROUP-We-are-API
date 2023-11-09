@@ -41,10 +41,11 @@
   z-index: 999;
 }
 .avatar {
-  border: 2px solid red;
   height: 5rem;
-
-  .Header {
-    border: 30px solid red;
-  }
+}
+.Header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
 }

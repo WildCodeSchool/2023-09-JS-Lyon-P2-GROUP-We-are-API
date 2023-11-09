@@ -42,9 +42,12 @@
 }
 
 .avatar {
-  border: 2px solid red;
   height: 5rem;
 }
-.avatar .Header {
-  border: 30px solid red;
+
+.Header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
 } /*# sourceMappingURL=App.module.css.map */
