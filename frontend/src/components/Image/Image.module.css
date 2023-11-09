@@ -13,25 +13,28 @@
   background-size: cover;
   width: 90%;
   height: 90%;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .titleMovie {
   color: #7474d6;
   text-align: center;
-  font-size: 2.2rem;
-  font-family: "Sniglet";
   font-size: 2rem;
+  font-family: "Sniglet";
+  font-size: 1.7rem;
 }
 
 @media screen and (min-width: 1200px) {
   .appImg {
-    width: 40vw;
-    margin-bottom: 4vh;
+    width: 35vw;
+    margin-bottom: 2vh;
   }
   .titleMovie {
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
   }
   .imgContainer {
-    gap: 0rem;
+    gap: 0;
   }
-}
+} /*# sourceMappingURL=Image.module.css.map */

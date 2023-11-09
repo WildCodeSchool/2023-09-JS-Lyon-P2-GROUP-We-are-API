@@ -68,6 +68,16 @@ body {
   font-size: 1.5rem;
   text-align: center;
 }
+
+@media screen and (min-width: 1200px) {
+  .user-Message {
+    font-size: 1.6rem;
+  }
+  .user-text {
+    font-size: 2.5rem;
+  }
+}
+
 .Avatar {
   margin: 2rem;
   height: 10rem;
