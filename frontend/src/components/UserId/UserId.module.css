@@ -47,6 +47,10 @@ body {
   z-index: 999;
 }
 
+.user-container::before {
+  background-color: #000000;
+}
+
 .user-Input {
   margin-top: 10vh;
   background-color: #eee;
@@ -64,6 +68,11 @@ body {
 
 .user-text {
   margin: 0;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: center;
+}
+
+.Avatar {
+  margin: 2rem;
+  height: 10rem;
 } /*# sourceMappingURL=UserId.module.css.map */

@@ -38,7 +38,11 @@ function UserId({ setStateUserId, setAvatarSelected }) {
       />
       {selectedAvatar && (
         <div>
-          <img src={selectedAvatar} alt="Avatar sélectionné" />
+          <img
+            className={styles.Avatar}
+            src={selectedAvatar}
+            alt="Avatar sélectionné"
+          />
         </div>
       )}
       <div className={styles["user-pseudo"]}>
