@@ -1,50 +1,50 @@
 @import "../../Utilities.scss";
 
-body {   
- @include flexCenter;
-} 
+body {
+  @include flexCenter;
+}
 
 // effect blur sur background de userId
-.blur-container::before {   
-  content: "";   
-  position: fixed;   
-  left: 0;   
-  right: 0;   
-  top: 0; 
-  bottom: 0;   
-  z-index: 1;   
-  width: 100%;   
-  height: 100%;   
-  background-size: cover;   
-  backdrop-filter: blur(10px);   
-  -webkit-backdrop-filter: blur(10px);   
-  -moz-backdrop-filter: blur(10px);   
-  -o-backdrop-filter: blur(10px);   
-  -ms-backdrop-filter: blur(10px); 
-} 
+.blur-container::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+}
 
-.user-container {   
+.user-container {
   @include flexCenter;
-  top: 0;   
-  bottom: 0;   
-  left: 0;   
-  right: 0;   
-  position: absolute;   
-  flex-direction: column;   
-  width: 33vh;   
-  height: 69vh;   
-  border-radius: 20px;   
-  box-shadow: 5px 5px 15px 5px #000000;   
-  background-color: #ffffff;   
-  padding: 50px;   
-  text-align: center;   
-  margin: auto;   
-  z-index: 999; 
-} 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  flex-direction: column;
+  width: 33vh;
+  height: 69vh;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #ffffff;
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+  z-index: 999;
+}
 
-.user-Input {   
-  margin-top: 10vh;   
-  background-color: #eee;   
+.user-Input {
+  margin-top: 10vh;
+  background-color: #eee;
   padding: 12px;
   height: 3rem;
   width: 10rem;
@@ -62,4 +62,3 @@ body {
   font-size: 3rem;
   text-align: center;
 }
-

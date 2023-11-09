@@ -1,72 +1,72 @@
 @import "../../Utilities.scss";
 
 .appAnswer {
-@include flexCenter;
-    gap: 0.6rem;
-    padding: 1rem;
-    margin: 1rem;
+  @include flexCenter;
+  gap: 0.6rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 input {
-    height: 2rem;
-    width: 10rem;
-    border: 2px solid #7474D6;
-    border-radius: 4px;
-    font-size: $fontSizeMain;
+  height: 2rem;
+  width: 10rem;
+  border: 2px solid #7474d6;
+  border-radius: 4px;
+  font-size: $fontSizeMain;
 }
 
 input:focus {
   outline: none;
-  box-shadow: -1px -1px 10px #7474D6;
-  border: 3px solid #7474D6;
+  box-shadow: -1px -1px 10px #7474d6;
+  border: 3px solid #7474d6;
   transition: 0.1s;
   transition-property: box-shadow;
 }
 
 label {
-    font-size: $fontSizeMain;
-    color: #7474D6;
+  font-size: $fontSizeMain;
+  color: #7474d6;
 }
 
 button {
-    height: 2.3rem;
-    width: 6.8rem;
-    border: none;
-    border-radius: 5px;
-    box-shadow: #7474D6 0px 3px 8px;
-    background-color: #7474D6;
-    color: rgb(255, 252, 252);
-    font-weight: 900;
-    font-size: 2rem;
-    text-align: center;
-    cursor: pointer;
+  height: 2.3rem;
+  width: 6.8rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: #7474d6 0px 3px 8px;
+  background-color: #7474d6;
+  color: rgb(255, 252, 252);
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 button:hover {
-   background-color: #202c55;
+  background-color: #202c55;
 }
 
 @media screen and (min-width: 1200px) {
-    .appAnswer {
-      padding: 0 0 1rem 0;
-      margin: 0;  
-    }
+  .appAnswer {
+    padding: 0 0 1rem 0;
+    margin: 0;
+  }
 
-    input {
-        height: 2.8rem;
-        width: 35rem;
-    }
+  input {
+    height: 2.8rem;
+    width: 35rem;
+  }
 
-    button {
-        height: 2.8rem;
-        width: 8rem;
-    }
+  button {
+    height: 2.8rem;
+    width: 8rem;
+  }
 
-    .appAnswer {
-        gap: 2rem;
-    }
+  .appAnswer {
+    gap: 2rem;
+  }
 
-    label {
-        font-size: 2.5rem;
-    }
+  label {
+    font-size: 2.5rem;
+  }
 }

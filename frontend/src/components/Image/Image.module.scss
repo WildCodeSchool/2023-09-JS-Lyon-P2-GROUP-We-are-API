@@ -8,15 +8,15 @@
 
 .appImg {
   @include flexCenter;
-    background-size: cover;
-    width: 90%;
-    height: 90%;
-  }
+  background-size: cover;
+  width: 90%;
+  height: 90%;
+}
 
 .titleMovie {
   @include font;
   font-size: 2rem;
-  }
+}
 
 @media screen and (min-width: 1200px) {
   .appImg {
