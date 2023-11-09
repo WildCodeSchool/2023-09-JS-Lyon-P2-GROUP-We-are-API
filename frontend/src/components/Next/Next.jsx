@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 export default function Next({ setAnswersReturn }) {
   return (
@@ -9,5 +9,5 @@ export default function Next({ setAnswersReturn }) {
 }
 
 Next.propTypes = {
-  setAnswersReturn: propTypes.func.isRequired,
+  setAnswersReturn: PropTypes.func.isRequired,
 };
