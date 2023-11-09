@@ -11,7 +11,7 @@ function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [answers, setAnswers] = useState("");
   const [answersReturn, setAnswersReturn] = useState(true);
-  // État local pour gérer le pseudo de l'utilisateur et l'activation du flou
+  // État local pour gérer le pseudo de l'utilisateur
   const [userId, setUserId] = useState(null);
   const [film, setFilm] = useState();
   const [score, setScore] = useState(0);
@@ -23,55 +23,61 @@ function App() {
   };
 
   return (
-    <div className={styles.appBody}>
-      <div className={styles.Header}>
-        <Header userId={userId} score={score} avatar={selectedAvatar} />
-        <div className={styles.divavatar}>
-          {selectedAvatar && (
-            <img
-              className={styles.avatar}
-              src={selectedAvatar}
-              alt="Avatar sélectionné"
+    <div className={styles.appAllContainer}>
+      <div className={styles.appAll}>
+        <div className={styles.appHeader}>
+          <Header userId={userId} score={score} />
+          <div className={styles.divavatar}>
+            {selectedAvatar && (
+              <img
+                className={styles.avatar}
+                src={selectedAvatar}
+                alt="Avatar sélectionné"
+              />
+            )}
+          </div>
+        </div>
+        <div className={styles.appBody}>
+          {answersReturn === true ? (
+            <Api
+              film={film}
+              setFilm={setFilm}
+              setAnswersReturn={setAnswersReturn}
             />
-          )}
+          ) : null}
+          {film ? <Image film={film} /> : <p>loading</p>}
+          {check === true ? (
+            <LogicAnswers
+              answers={answers}
+              film={film}
+              setAnswersReturn={setAnswersReturn}
+              answersReturn={answersReturn}
+              setScore={setScore}
+              score={score}
+              setFilm={setFilm}
+              setAnswers={setAnswers}
+              Api={<Api />}
+              setCheck={setCheck}
+              setPlease={setPlease}
+            />
+          ) : null}
+          <Answers
+            setAnswersReturn={setAnswersReturn}
+            answers={answers}
+            setAnswers={setAnswers}
+            setCheck={setCheck}
+          />
+          {please === true ? (
+            <p className={styles.retry}>Please retry</p>
+          ) : null}
+          {userId === null ? (
+            <UserId
+              setStateUserId={handleUserIdEntered}
+              setAvatarSelected={setSelectedAvatar}
+            />
+          ) : null}
         </div>
       </div>
-      {answersReturn === true ? (
-        <Api
-          film={film}
-          setFilm={setFilm}
-          setAnswersReturn={setAnswersReturn}
-        />
-      ) : null}
-      {film ? <Image film={film} /> : <p>loading</p>}
-      {check === true ? (
-        <LogicAnswers
-          answers={answers}
-          film={film}
-          setAnswersReturn={setAnswersReturn}
-          answersReturn={answersReturn}
-          setScore={setScore}
-          score={score}
-          setFilm={setFilm}
-          setAnswers={setAnswers}
-          Api={<Api />}
-          setCheck={setCheck}
-          setPlease={setPlease}
-        />
-      ) : null}
-      <Answers
-        setAnswersReturn={setAnswersReturn}
-        answers={answers}
-        setAnswers={setAnswers}
-        setCheck={setCheck}
-      />
-      {please === true ? <p>Please retry</p> : null}
-      {userId === null ? (
-        <UserId
-          setStateUserId={handleUserIdEntered}
-          setAvatarSelected={setSelectedAvatar}
-        />
-      ) : null}
     </div>
   );
 }

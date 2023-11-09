@@ -46,7 +46,7 @@ function UserId({ setStateUserId, setAvatarSelected }) {
         <input
           type="text"
           className={styles["user-Input"]}
-          placeholder="Choisis ton Pseudo s'il vous plaît"
+          placeholder="Pseudo"
           onKeyDown={handleKeyDown}
         />
       </div>
