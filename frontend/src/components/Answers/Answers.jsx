@@ -24,7 +24,7 @@ export default function Answers({
           TEST
         </button>
       </form>
-      {next ? <Next setAnswersReturn={setAnswersReturn} /> : null}
+      {next !== false ? <Next setAnswersReturn={setAnswersReturn} /> : null}
     </div>
   );
 }
