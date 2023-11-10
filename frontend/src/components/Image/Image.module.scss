@@ -1,0 +1,37 @@
+@import "../../Utilities.scss";
+
+.imgContainer {
+  @include flexCenter;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appImg {
+  @include flexCenter;
+  background-size: cover;
+  width: 90%;
+  height: 90%;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.titleMovie {
+  @include font;
+  font-size: 1.7rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .appImg {
+    width: 35vw;
+    margin-bottom: 2vh;
+  }
+
+  .titleMovie {
+    margin-bottom: 2vh;
+  }
+
+  .imgContainer {
+    gap: 0;
+  }
+}
