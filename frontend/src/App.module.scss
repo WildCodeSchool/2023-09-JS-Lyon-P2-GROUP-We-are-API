@@ -1,8 +1,10 @@
 @import "./Utilities.scss";
 
 @font-face {
-  font-family: 'Sniglet';
-  src: local('Sniglet'), url('./fonts/Sniglet/Sniglet-Regular.ttf') format('truetype');
+  font-family: "Sniglet";
+  src:
+    local("Sniglet"),
+    url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
 }
 
 * {
