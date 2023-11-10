@@ -30,7 +30,7 @@ function App() {
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
           <div className={styles.divavatar}>
-            {selectedAvatar && (
+            {selectedAvatar !== null && (
               <img
                 className={styles.avatar}
                 src={selectedAvatar}
