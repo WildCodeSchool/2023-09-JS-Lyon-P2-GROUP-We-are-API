@@ -49,7 +49,7 @@ function App() {
               setNext={setNext}
             />
           ) : null}
-          {film ? <Image film={film} /> : <p>loading</p>}
+          {film !== null ? <Image film={film} /> : <p>loading</p>}
           {check === true ? (
             <LogicAnswers
               answers={answers}
