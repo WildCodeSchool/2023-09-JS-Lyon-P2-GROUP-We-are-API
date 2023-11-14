@@ -23,10 +23,6 @@ body {
 }
 
 .user-container {
-  margin: 18vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +48,6 @@ body {
 }
 
 .user-Input {
-  margin-top: 10vh;
   background-color: #eee;
   padding: 12px;
   height: 3rem;
@@ -68,6 +63,7 @@ body {
 
 .user-text {
   margin: 0;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -83,5 +79,4 @@ body {
 .Avatar {
   margin: 2rem;
   height: 10rem;
-  margin-left: 4rem;
 } /*# sourceMappingURL=UserId.module.css.map */
