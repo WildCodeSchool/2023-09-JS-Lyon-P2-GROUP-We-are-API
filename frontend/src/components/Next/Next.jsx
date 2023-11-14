@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
+import styles from "./Next.module.css";
 
 export default function Next({ setAnswersReturn }) {
   return (
-    <button type="button" onClick={() => setAnswersReturn(true)}>
+    <button
+      className={styles.BTNext}
+      type="button"
+      onClick={() => setAnswersReturn(true)}
+    >
       Next
     </button>
   );

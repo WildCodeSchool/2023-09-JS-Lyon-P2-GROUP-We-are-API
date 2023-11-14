@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
 @import "./Utilities.scss";
+
+@font-face {
+  font-family: "Sniglet";
+  src:
+    local("Sniglet"),
+    url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
+}
 
 * {
   margin: 0;

@@ -10,10 +10,16 @@ export default function LogicAnswers({
   setCheck,
   setPlease,
   setNext,
+  next,
 }) {
+  const TOLERANCE_THRESHOLD = 0.8;
+
   function replace(string, arrayString, beforeReplace, afterReplace) {
-    if (string.includes(beforeReplace)) {
-      if (!arrayString.includes(string.replace(beforeReplace, afterReplace))) {
+    if (string.includes(beforeReplace) === true) {
+      if (
+        arrayString.includes(string.replace(beforeReplace, afterReplace)) ===
+        false
+      ) {
         arrayString.push(string.replace(beforeReplace, afterReplace));
       }
       return arrayString;
@@ -22,13 +28,13 @@ export default function LogicAnswers({
   }
 
   function declinations(string, arrayString, separator) {
-    if (string.includes(separator)) {
+    if (string.includes(separator) === true) {
       const arr = string.split(separator);
-      if (!arrayString.includes(arr[0].trim())) {
+      if (arrayString.includes(arr[0].trim()) === false) {
         arrayString.push(arr[0].trim());
       }
 
-      if (!arrayString.includes(arr[1].trim())) {
+      if (arrayString.includes(arr[1].trim()) === false) {
         arrayString.push(arr[1].trim());
       }
 
@@ -59,7 +65,7 @@ export default function LogicAnswers({
       }
     }
 
-    return match >= 0.8 * lowerSolution.length;
+    return match >= TOLERANCE_THRESHOLD * lowerSolution.length;
   }
 
   function verify(solution, response) {
@@ -80,7 +86,7 @@ export default function LogicAnswers({
 
     for (let i = 0; i < arraySolution.length; i += 1) {
       for (let j = 0; j < arrayResponse.length; j += 1) {
-        if (test(arraySolution[i], arrayResponse[j])) {
+        if (test(arraySolution[i], arrayResponse[j]) === true) {
           return true;
         }
       }
@@ -89,7 +95,7 @@ export default function LogicAnswers({
   }
 
   useEffect(() => {
-    if (verify(film.title, answers)) {
+    if (verify(film.title, answers) === true && next === false) {
       setScore(score + 1);
       setPlease(false);
       setNext(true);

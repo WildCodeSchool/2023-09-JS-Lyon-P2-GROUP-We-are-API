@@ -18,7 +18,7 @@ function AvatarPicker({ setSelectedAvatar, onAvatarSelected }) {
     <div className={styles["avatar-selector"]}>
       <h2>Choisissez votre avatar :</h2>
       <div className={styles["avatar-list"]}>
-        {avatarImages && avatarImages.length > 0 ? (
+        {avatarImages !== null && avatarImages.length > 0 ? (
           avatarImages.map((avatarUrl) => (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
             <img

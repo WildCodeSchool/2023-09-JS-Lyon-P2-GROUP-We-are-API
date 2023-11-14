@@ -6,7 +6,6 @@ import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
-import Timer from "./components/timer/Timer";
 
 function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
@@ -38,7 +37,7 @@ function App() {
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
           <div className={styles.divavatar}>
-            {selectedAvatar && (
+            {selectedAvatar !== null && (
               <img
                 className={styles.avatar}
                 src={selectedAvatar}
@@ -46,7 +45,6 @@ function App() {
               />
             )}
           </div>
-          <Timer setNext={setNext} />
         </div>
         <div className={styles.appBody}>
           {answersReturn === true ? (
@@ -57,7 +55,7 @@ function App() {
               setNext={setNext}
             />
           ) : null}
-          {film ? <Image film={film} /> : <p>loading</p>}
+          {film !== null ? <Image film={film} /> : <p>loading</p>}
           {check === true ? (
             <LogicAnswers
               answers={answers}
@@ -72,6 +70,7 @@ function App() {
               setCheck={setCheck}
               setPlease={setPlease}
               setNext={setNext}
+              next={next}
             />
           ) : null}
           <Answers

@@ -37,7 +37,7 @@ function UserId({ setStateUserId, setAvatarSelected }) {
           avatarImages={avatarImages}
           onAvatarSelected={handleAvatarSelected}
         />
-        {selectedAvatar && (
+        {selectedAvatar !== null && (
           <div>
             <img
               className={styles.Avatar}
