@@ -14,7 +14,6 @@
     "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
-    "fastest-levenshtein": "^1.0.16",
     "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
