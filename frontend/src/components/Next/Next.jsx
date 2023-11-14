@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import styles from "./Next.module.css";
 
-export default function Next({ setAnswersReturn }) {
+export default function Next({ setAnswersReturn, reset }) {
+  function rest() {
+    const element = reset;
+    setAnswersReturn(true);
+    element.current = false;
+  }
   return (
-    <button
-      className={styles.BTNext}
-      type="button"
-      onClick={() => setAnswersReturn(true)}
-    >
+    <button className={styles.BTNext} type="button" onClick={() => rest()}>
       Next
     </button>
   );
@@ -15,4 +16,13 @@ export default function Next({ setAnswersReturn }) {
 
 Next.propTypes = {
   setAnswersReturn: PropTypes.func.isRequired,
+  reset: PropTypes.exact({
+    current: PropTypes.bool.isRequired,
+  }),
+};
+
+Next.defaultProps = {
+  reset: {
+    current: "waiting",
+  },
 };
