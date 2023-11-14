@@ -56,6 +56,7 @@ body {
   text-align: center;
   font-size: 3rem;
   margin-top: 10%;
+  font-family: "Sniglet";
 }
 
 .user-Message {
@@ -68,6 +69,7 @@ body {
   font-family: "Sniglet";
   font-size: 2rem;
   text-align: center;
+  font-family: "Sniglet";
 }
 
 .Avatar {

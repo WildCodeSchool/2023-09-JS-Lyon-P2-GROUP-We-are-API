@@ -6,11 +6,11 @@
     local("Sniglet"),
     url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
 }
+
 .avatar {
   height: 8rem;
 }
 .appBody {
-  //background-color: red;
   display: flex;
   flex-direction: column;
   margin-right: 10%;

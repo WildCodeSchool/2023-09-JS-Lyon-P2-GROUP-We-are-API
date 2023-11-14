@@ -7,6 +7,7 @@
 
 .logoText {
   font-size: 3rem;
+  font-family: "Sniglet";
 }
 
 .userAndScore {
@@ -16,6 +17,10 @@
   position: absolute;
   margin-top: 7%;
   padding-top: 1%;
+}
+
+#logo {
+  scale: 0.5;
 }
 
 .userInfo {
@@ -28,11 +33,15 @@
 .theUser {
   font-size: 3rem;
   margin-left: 10%;
+  font-family: "Sniglet";
+  color: #7474d6;
 }
 
 .theScore {
   font-size: 3rem;
   margin-right: 8%;
+  font-family: "Sniglet";
+  color: #7474d6;
 }
 
 @media screen and (max-width: 480px) {

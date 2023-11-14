@@ -14,11 +14,13 @@
   margin-bottom: 15%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Sniglet";
 }
 
 @media screen and (max-width: 480px) {
   .text-avatar {
     font-size: 2rem;
+    font-family: "Sniglet";
   }
   .imgAvatar {
     height: 5rem;
