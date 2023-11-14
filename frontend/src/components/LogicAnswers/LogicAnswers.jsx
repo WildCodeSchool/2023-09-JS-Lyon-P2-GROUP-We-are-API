@@ -48,7 +48,9 @@ export default function LogicAnswers({
     const lowerResponse = response.toLowerCase();
     const match = distance(lowerSolution, lowerResponse);
 
-    return match >= TOLERANCE_THRESHOLD * lowerSolution.length;
+    return (
+      lowerSolution.length - match >= TOLERANCE_THRESHOLD * lowerSolution.length
+    );
   }
 
   function verify(solution, response) {
