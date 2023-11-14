@@ -5,6 +5,18 @@
   gap: 1.5rem;
   padding: 1rem;
   margin: 1rem;
+  display: flex;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Button-container {
+  display: flex;
 }
 
 input {
@@ -13,6 +25,7 @@ input {
   border: 2px solid #7474d6;
   border-radius: 4px;
   font-size: 2rem;
+  margin: 2rem;
 }
 
 input:focus {
@@ -23,7 +36,7 @@ input:focus {
   transition-property: box-shadow;
 }
 
-button {
+.BTtest {
   height: 2rem;
   width: 6.8rem;
   border: none;
@@ -37,7 +50,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.BTtest:hover {
   background-color: #202c55;
 }
 
