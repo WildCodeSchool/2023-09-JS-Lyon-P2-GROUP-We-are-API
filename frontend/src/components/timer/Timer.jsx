@@ -34,7 +34,6 @@ export default function Timer({ setNext }) {
 
   return (
     <div>
-      <div>{seconde.current}</div>
       <div className={styles.container}>
         <div className={styles.progressBar}>
           <div
@@ -43,7 +42,9 @@ export default function Timer({ setNext }) {
               width: `${progress}%`,
               backgroundColor: getColor(),
             }}
-          />
+          >
+            <p className={styles.seconde}>{seconde.current}</p>
+          </div>
         </div>
       </div>
     </div>
