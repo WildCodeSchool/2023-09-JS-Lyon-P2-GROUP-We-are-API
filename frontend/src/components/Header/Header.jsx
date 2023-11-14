@@ -3,10 +3,8 @@ import PropTypes from "prop-types";
 import styles from "./Header.module.css";
 
 function Header({ userId, score }) {
-  console.log("Header");
   return (
     <div className={styles.header}>
-      {console.log("Header rendu")}
       <div className={styles.userInfo}>
         <h2 className={styles.logoText}>API-Quiz</h2>
         <div className={styles.userAndScore}>
