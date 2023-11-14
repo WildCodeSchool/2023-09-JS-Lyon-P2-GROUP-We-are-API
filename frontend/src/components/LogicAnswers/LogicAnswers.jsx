@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
+import { distance } from "fastest-levenshtein";
 
 export default function LogicAnswers({
   film,
@@ -45,25 +46,7 @@ export default function LogicAnswers({
   function test(solution, response) {
     const lowerSolution = solution.toLowerCase();
     const lowerResponse = response.toLowerCase();
-    let match = 0;
-    const wordsSolution = lowerSolution.split(" ");
-    const wordsResponse = lowerResponse.split(" ");
-
-    for (let k = 0; k < lowerSolution.length; k += 1) {
-      if (lowerSolution[k] === lowerResponse[k]) {
-        match += 1;
-      }
-    }
-
-    let matchWords = 0;
-    for (let l = 0; l < wordsSolution.length; l += 1) {
-      if (wordsSolution[l] === wordsResponse[l]) {
-        matchWords += 1;
-      }
-      if (matchWords >= wordsSolution.length - 1) {
-        match = lowerSolution.length;
-      }
-    }
+    const match = distance(lowerSolution, lowerResponse);
 
     return match >= TOLERANCE_THRESHOLD * lowerSolution.length;
   }
@@ -76,13 +59,29 @@ export default function LogicAnswers({
     declinations(solution, arraySolution, "-");
     declinations(solution, arraySolution, ".,");
     declinations(solution, arraySolution, ";");
+    declinations(solution, arraySolution, ",");
     replace(solution, arraySolution, "&", "and");
+    replace(solution, arraySolution, "&", "et");
+    replace(solution, arraySolution, "é", "e");
+    replace(solution, arraySolution, "é", "è");
+    replace(solution, arraySolution, "è", "é");
+    replace(solution, arraySolution, "è", "e");
+    replace(solution, arraySolution, "à", "a");
+    replace(solution, arraySolution, "ù", "u");
 
     declinations(response, arrayResponse, ":");
     declinations(response, arrayResponse, "-");
     declinations(response, arrayResponse, ".,");
     declinations(response, arrayResponse, ";");
+    declinations(response, arrayResponse, ",");
     replace(response, arrayResponse, "&", "and");
+    replace(response, arrayResponse, "&", "et");
+    replace(response, arrayResponse, "é", "e");
+    replace(response, arrayResponse, "é", "è");
+    replace(response, arrayResponse, "è", "é");
+    replace(response, arrayResponse, "è", "e");
+    replace(response, arrayResponse, "à", "a");
+    replace(response, arrayResponse, "ù", "u");
 
     for (let i = 0; i < arraySolution.length; i += 1) {
       for (let j = 0; j < arrayResponse.length; j += 1) {
