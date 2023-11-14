@@ -14,21 +14,8 @@ function App() {
   // État local pour gérer le pseudo de l'utilisateur
   const [userId, setUserId] = useState(null);
   const [film, setFilm] = useState({
-    adult: false,
-    backdrop_path: "/8yACFuo4OaIiKr9hHFlmPcGalKx.jpg",
-    genre_ids: [28, 12, 878],
-    id: 76341,
+    backdrop_path: "xxx",
     original_language: "en",
-    original_title: "Mad Max: Fury Road",
-    overview:
-      "Hanté par un lourd passé, Mad Max estime que le meilleur moyen de survivre est de rester seul. Cependant, il se retrouve embarqué par une bande qui parcourt le désert à bord d’un véhicule militaire piloté par l’Impératrice Furiosa. Ils fuient la Citadelle où sévit le terrible Immortan Joe qui s’est fait voler un objet irremplaçable. Enragé, ce Seigneur de guerre envoie ses hommes pour traquer les rebelles impitoyablement…",
-    popularity: 114.861,
-    poster_path: "/oLy2V6AWSEfdPgKOtrSGnwB3Q2R.jpg",
-    release_date: "2015-05-13",
-    title: "Mad Max : Fury Road",
-    video: false,
-    vote_average: 7.6,
-    vote_count: 21041,
   });
   const [score, setScore] = useState(0);
   const [check, setCheck] = useState(false);

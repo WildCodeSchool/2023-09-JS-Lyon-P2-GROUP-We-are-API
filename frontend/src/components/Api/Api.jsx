@@ -14,7 +14,11 @@ function Api({ film, setFilm, setAnswersReturn, setNext, reset, setPlease }) {
         setFilm(movieParsed.results[alea]);
       })();
     }
-    if (film.original_language !== "fr" || film.original_language !== "en") {
+    if (
+      film.original_language !== "fr" ||
+      film.original_language !== "en" ||
+      film.backdrop_path === null
+    ) {
       apiCall();
     }
     setAnswersReturn(false);
