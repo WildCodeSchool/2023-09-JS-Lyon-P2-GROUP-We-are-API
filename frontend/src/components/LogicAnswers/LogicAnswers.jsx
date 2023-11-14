@@ -10,6 +10,7 @@ export default function LogicAnswers({
   setCheck,
   setPlease,
   setNext,
+  next,
 }) {
   const TOLERANCE_THRESHOLD = 0.8;
 
@@ -93,7 +94,7 @@ export default function LogicAnswers({
     return false;
   }
   useEffect(() => {
-    if (verify(film.title, answers) === true) {
+    if (verify(film.title, answers) === true && next === false) {
       setScore(score + 1);
       setPlease(false);
       setNext(true);

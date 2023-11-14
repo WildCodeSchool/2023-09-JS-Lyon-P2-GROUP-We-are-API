@@ -9,6 +9,7 @@ import avatar4 from "./Avatar.img/avatar4.png";
 const avatarImages = [avatar1, avatar2, avatar3, avatar4];
 
 function AvatarPicker({ setSelectedAvatar, onAvatarSelected }) {
+  console.log("Avatar");
   const handleAvatarClick = (avatarUrl) => {
     setSelectedAvatar(avatarUrl);
     onAvatarSelected(avatarUrl);
@@ -16,6 +17,7 @@ function AvatarPicker({ setSelectedAvatar, onAvatarSelected }) {
 
   return (
     <div className={styles["avatar-selector"]}>
+      {console.log("Avatar rendu")}
       <h2>Choisissez votre avatar :</h2>
       <div className={styles["avatar-list"]}>
         {avatarImages !== null && avatarImages.length > 0 ? (

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./Answers.module.css";
 import Next from "../Next/Next";
@@ -8,19 +9,27 @@ export default function Answers({
   next,
   setAnswersReturn,
 }) {
-  const input = document.getElementById("response");
-  function value(e) {
+  const [value, setValue] = useState("");
+
+  function valueChecked(e) {
     e.preventDefault();
-    setAnswers(input.value);
+    setAnswers(value);
     setCheck(true);
-    input.value = "";
+    setValue("");
   }
   // test
   return (
     <div className={styles.appAnswer}>
       <form onSubmit={(e) => value(e)}>
-        <input type="text" id="response" />
-        <button type="button" onClick={(e) => value(e)} name="Answers">
+        <input
+          type="text"
+          id="response"
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+        />
+        <button type="button" onClick={(e) => valueChecked(e)} name="Answers">
           TEST
         </button>
       </form>
