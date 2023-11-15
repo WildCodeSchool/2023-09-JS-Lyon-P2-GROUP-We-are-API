@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
 import styles from "./Image.module.css";
 import Timer from "../timer/Timer";
 
-export default function Image({ film }) {
-  const [next, setNext] = useState(false);
-
+export default function Image({ film, reset }) {
   return (
     <div className={styles.TimerContainer}>
       <div className={styles.imgContainer}>
@@ -15,7 +12,7 @@ export default function Image({ film }) {
           alt="Film a trouver"
         />
         <div className={styles.Timer}>
-          <Timer setNext={setNext} next={next} />
+          {reset.current === true ? <Timer /> : null}
           <p className={styles.titleMovie}>{film.title} </p>
         </div>
       </div>
@@ -25,6 +22,9 @@ export default function Image({ film }) {
 
 Image.defaultProps = {
   film: { title: "Veuillez attendre votre film" },
+  reset: {
+    current: "waiting",
+  },
 };
 Image.propTypes = {
   film: PropTypes.exact({
@@ -42,5 +42,8 @@ Image.propTypes = {
     video: PropTypes.bool,
     vote_average: PropTypes.number,
     vote_count: PropTypes.number,
+  }),
+  reset: PropTypes.exact({
+    current: PropTypes.bool.isRequired,
   }),
 };
