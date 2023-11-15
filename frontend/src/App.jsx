@@ -27,7 +27,7 @@ function App() {
   return (
     <div className={styles.appAllContainer}>
       <div className={styles.appAll}>
-        <header className={styles.appHeader}>
+        <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
           <div className={styles.divavatar}>
             {selectedAvatar !== null && (
@@ -38,8 +38,8 @@ function App() {
               />
             )}
           </div>
-        </header>
-        <main className={styles.appBody}>
+        </div>
+        <div className={styles.appBody}>
           {answersReturn === true ? (
             <Api
               film={film}
@@ -86,12 +86,7 @@ function App() {
               setAvatarSelected={setSelectedAvatar}
             />
           ) : null}
-        </main>
-        <footer className={styles.appFooter}>
-          <p className={styles.textFooter}>
-            © 2023 API Quiz. All Rights Reserved
-          </p>
-        </footer>
+        </div>
       </div>
       <div className={styles.appMenu}>
         <select
