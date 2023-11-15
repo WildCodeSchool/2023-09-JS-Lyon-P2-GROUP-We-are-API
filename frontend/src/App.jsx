@@ -1,10 +1,10 @@
+import { Outlet, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
-import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
 
 function App() {
@@ -22,11 +22,12 @@ function App() {
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
+  const navigate = useNavigate();
 
   return (
     <div className={styles.appAllContainer}>
       <div className={styles.appAll}>
-        <div className={styles.appHeader}>
+        <header className={styles.appHeader}>
           <Header userId={userId} score={score} />
           <div className={styles.divavatar}>
             {selectedAvatar !== null && (
@@ -37,8 +38,8 @@ function App() {
               />
             )}
           </div>
-        </div>
-        <div className={styles.appBody}>
+        </header>
+        <main className={styles.appBody}>
           {answersReturn === true ? (
             <Api
               film={film}
@@ -47,7 +48,11 @@ function App() {
               setNext={setNext}
             />
           ) : null}
-          {film !== null ? <Image film={film} /> : <p>loading</p>}
+          {film !== null ? (
+            <Outlet context={[film, setFilm]} />
+          ) : (
+            <p>loading</p>
+          )}
           {check === true ? (
             <LogicAnswers
               answers={answers}
@@ -81,8 +86,21 @@ function App() {
               setAvatarSelected={setSelectedAvatar}
             />
           ) : null}
-        </div>
+        </main>
       </div>
+      <div className={styles.appMenu}>
+        <select
+          className={styles.dropDownMenu}
+          onChange={(e) => navigate(e.target.value)}
+        >
+          <option value="">Choose the theme</option>
+          <option value="/images">Images</option>
+          <option value="/synopsis">Synopsis</option>
+        </select>
+      </div>
+      <footer>
+        <p>© 2023 API Quiz. All Rights Reserved</p>
+      </footer>
     </div>
   );
 }

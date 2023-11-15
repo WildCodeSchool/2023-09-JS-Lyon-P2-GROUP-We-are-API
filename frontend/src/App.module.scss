@@ -45,6 +45,15 @@
   @include font;
 }
 
+.dropDownMenu {
+  height: 1.6rem;
+  border-radius: 5px;
+  border: 2px solid #7474d6;
+  background-color: rgb(255, 252, 252);
+  color: #202c55;
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 480px) {
   body {
     @include backgroundStyle;
@@ -52,7 +61,8 @@
   }
 }
 
-@media screen and (min-width: 480px) {
+
+@media screen and (min-width: 481px) {
   body {
     @include backgroundStyle;
     background-image: url("./src/assets/bouboulesDesktop.png");
@@ -78,6 +88,8 @@
     font-size: 1.3rem;
   }
 }
+
+
 .blur {
   position: relative;
   filter: blur(6px);
