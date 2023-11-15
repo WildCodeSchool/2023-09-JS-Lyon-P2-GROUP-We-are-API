@@ -47,10 +47,17 @@ function App() {
               setAnswersReturn={setAnswersReturn}
               setNext={setNext}
               reset={reset}
+              setPlease={setPlease}
             />
           ) : null}
           {film !== null ? (
-            <Image film={film} reset={reset} userId={userId} />
+            <Image
+              film={film}
+              reset={reset}
+              userId={userId}
+              setNext={setNext}
+              next={next}
+            />
           ) : (
             <p>loading</p>
           )}
