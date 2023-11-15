@@ -8,6 +8,7 @@ export default function Answers({
   setCheck,
   next,
   setAnswersReturn,
+  reset,
 }) {
   const [value, setValue] = useState("");
 
@@ -40,7 +41,7 @@ export default function Answers({
               Submit
             </button>
             {next !== false ? (
-              <Next setAnswersReturn={setAnswersReturn} />
+              <Next setAnswersReturn={setAnswersReturn} reset={reset} />
             ) : null}
           </div>
         </form>

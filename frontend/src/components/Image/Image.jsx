@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./Image.module.css";
 import Timer from "../timer/Timer";
 
-export default function Image({ film }) {
+export default function Image({ film, reset }) {
   const [next, setNext] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export default function Image({ film }) {
           alt="Film a trouver"
         />
         <div className={styles.Timer}>
-          <Timer setNext={setNext} next={next} />
+          {reset.current === true ? <Timer /> : null}
           <p className={styles.titleMovie}>{film.title} </p>
         </div>
       </div>
