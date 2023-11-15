@@ -3,8 +3,9 @@ import styles from "./Next.module.css";
 
 export default function Next({ setAnswersReturn, reset }) {
   function rest() {
+    const element = reset;
     setAnswersReturn(true);
-    reset.current = false;
+    element.current = false;
   }
   return (
     <button className={styles.BTNext} type="button" onClick={() => rest()}>

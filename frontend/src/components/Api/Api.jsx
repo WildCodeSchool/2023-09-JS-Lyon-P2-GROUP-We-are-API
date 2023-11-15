@@ -14,7 +14,8 @@ function Api({ setFilm, setAnswersReturn, setNext, reset }) {
     })();
     setAnswersReturn(false);
     setNext(false);
-    reset.current = true;
+    const element = reset;
+    element.current = true;
   }, []);
 }
 
