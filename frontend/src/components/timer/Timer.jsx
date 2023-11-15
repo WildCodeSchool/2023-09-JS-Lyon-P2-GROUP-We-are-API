@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import styles from "./Timer.module.css";
 
-export default function Timer() {
+export default function Timer({ setNext }) {
   const chrono = 100;
   const [filled, setFilled] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
@@ -11,6 +12,7 @@ export default function Timer() {
     } else {
       setFilled(0);
       setIsRunning(false);
+      setNext(true);
     }
   }, [filled, isRunning]);
   const getColor = () => {
@@ -45,3 +47,7 @@ export default function Timer() {
     </div>
   );
 }
+
+Timer.propTypes = {
+  setNext: PropTypes.func.isRequired,
+};
