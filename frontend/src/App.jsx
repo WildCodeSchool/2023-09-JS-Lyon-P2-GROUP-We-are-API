@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
@@ -19,6 +19,7 @@ function App() {
   const [check, setCheck] = useState(false);
   const [please, setPlease] = useState(false);
   const [next, setNext] = useState(false);
+  const reset = useRef(true);
   // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
@@ -38,7 +39,9 @@ function App() {
               />
             )}
           </div>
-          <Timer setNext={setNext} />
+          {reset.current === true ? (
+            <Timer setNext={setNext} next={next} reset={reset.current} />
+          ) : null}
         </div>
         <div className={styles.appBody}>
           {answersReturn === true ? (
@@ -47,6 +50,7 @@ function App() {
               setFilm={setFilm}
               setAnswersReturn={setAnswersReturn}
               setNext={setNext}
+              reset={reset}
             />
           ) : null}
           {film !== null ? <Image film={film} /> : <p>loading</p>}
@@ -72,6 +76,7 @@ function App() {
             setAnswers={setAnswers}
             setCheck={setCheck}
             next={next}
+            reset={reset}
           />
           {please === true ? (
             <p className={styles.retry}>Please retry</p>

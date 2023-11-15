@@ -7,6 +7,7 @@ export default function Answers({
   setCheck,
   next,
   setAnswersReturn,
+  reset,
 }) {
   const input = document.getElementById("response");
   function value(e) {
@@ -24,7 +25,9 @@ export default function Answers({
           TEST
         </button>
       </form>
-      {next !== false ? <Next setAnswersReturn={setAnswersReturn} /> : null}
+      {next !== false ? (
+        <Next setAnswersReturn={setAnswersReturn} reset={reset} />
+      ) : null}
     </div>
   );
 }
@@ -34,4 +37,12 @@ Answers.propTypes = {
   setCheck: PropTypes.func.isRequired,
   next: PropTypes.bool.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,
+  reset: PropTypes.exact({
+    current: PropTypes.bool.isRequired,
+  }),
+};
+Answers.defaultProps = {
+  reset: {
+    current: "waiting",
+  },
 };
