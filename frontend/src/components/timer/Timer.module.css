@@ -5,13 +5,21 @@
 }
 
 .progressBar {
-  width: 100%;
+  width: 101%;
   height: 100%;
+  display: flex;
 }
 
 .fillBar {
   width: 100%;
   height: 100%;
   transition: width 0.5s ease-out;
-  background-color: green;
+}
+
+.seconde {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 50%;
 } /*# sourceMappingURL=Timer.module.css.map */

@@ -1,15 +1,24 @@
 import PropTypes from "prop-types";
+import React, { useState } from "react";
 import styles from "./Image.module.css";
+import Timer from "../timer/Timer";
 
 export default function Image({ film }) {
+  const [next, setNext] = useState(false);
+
   return (
-    <div className={styles.imgContainer}>
-      <img
-        className={styles.appImg}
-        src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
-        alt="Film a trouver"
-      />
-      <p className={styles.titleMovie}>{film.title} </p>
+    <div className={styles.TimerContainer}>
+      <div className={styles.imgContainer}>
+        <img
+          className={styles.appImg}
+          src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
+          alt="Film a trouver"
+        />
+        <div className={styles.Timer}>
+          <Timer setNext={setNext} next={next} />
+          <p className={styles.titleMovie}>{film.title} </p>
+        </div>
+      </div>
     </div>
   );
 }

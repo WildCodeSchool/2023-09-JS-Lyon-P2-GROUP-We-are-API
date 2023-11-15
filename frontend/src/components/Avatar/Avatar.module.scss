@@ -1,9 +1,12 @@
-.avatar-selector {
-}
 .avatar-list {
   display: flex;
+  justify-content: center;
 }
 .img-avatar {
   height: 3rem;
   cursor: pointer;
+}
+.text-avatar {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
