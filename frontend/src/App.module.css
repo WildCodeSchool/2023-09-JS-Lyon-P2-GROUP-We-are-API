@@ -56,6 +56,17 @@
   font-size: 1rem;
 }
 
+.appFooter {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textFooter {
+  color: #7474d6;
+}
+
 @media screen and (max-width: 480px) {
   body {
     background-size: cover;
