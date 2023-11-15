@@ -21,6 +21,9 @@ function Api({ setFilm, setAnswersReturn, setNext, reset }) {
 Api.propTypes = {
   setAnswersReturn: PropTypes.func.isRequired,
   setFilm: PropTypes.func.isRequired,
+  reset: PropTypes.exact({
+    current: PropTypes.bool.isRequired,
+  }),
 };
 
 export default Api;

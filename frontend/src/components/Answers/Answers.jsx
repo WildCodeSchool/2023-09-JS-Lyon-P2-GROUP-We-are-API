@@ -55,4 +55,13 @@ Answers.propTypes = {
   setCheck: PropTypes.func.isRequired,
   next: PropTypes.bool.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,
+  reset: PropTypes.exact({
+    current: PropTypes.bool.isRequired,
+  }),
+};
+
+Answers.defaultProps = {
+  reset: {
+    current: "waiting",
+  },
 };

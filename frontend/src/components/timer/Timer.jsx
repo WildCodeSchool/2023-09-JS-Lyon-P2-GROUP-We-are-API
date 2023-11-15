@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import styles from "./Timer.module.css";
 
@@ -38,13 +37,9 @@ export default function Timer() {
               width: `${filled}%`,
               backgroundColor: getColor(),
             }}
-           />
+          />
         </div>
       </div>
     </div>
   );
 }
-
-Timer.propTypes = {
-  setNext: PropTypes.func.isRequired,
-};
