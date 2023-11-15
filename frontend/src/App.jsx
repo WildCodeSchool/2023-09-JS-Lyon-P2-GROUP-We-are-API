@@ -49,7 +49,11 @@ function App() {
               reset={reset}
             />
           ) : null}
-          {film !== null ? <Image film={film} reset={reset} /> : <p>loading</p>}
+          {film !== null ? (
+            <Image film={film} reset={reset} userId={userId} />
+          ) : (
+            <p>loading</p>
+          )}
           {check === true ? (
             <LogicAnswers
               answers={answers}
@@ -78,7 +82,7 @@ function App() {
           {please === true ? (
             <p className={styles.retry}>Please retry</p>
           ) : null}
-          {userId === null ? (
+          {userId === null || selectedAvatar === null ? (
             <UserId
               setStateUserId={handleUserIdEntered}
               setAvatarSelected={setSelectedAvatar}
