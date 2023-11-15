@@ -1,5 +1,5 @@
 .container {
-  width: 36.5%;
+  width: 60%;
   height: 3%;
   position: absolute;
 }
@@ -15,18 +15,25 @@
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-.seconde {
+.chrono {
   margin: 0;
   display: flex;
-  align-items: center;
-  height: 100%;
-  margin-left: 50%;
-  position: sticky;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
 }
 @media screen and (min-width: 1200px) {
   .progressBar {
     width: 49.1vw;
     height: 100%;
     display: flex;
+    z-index: 1;
+  }
+  .chrono {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 77%;
+    position: absolute;
   }
 }
