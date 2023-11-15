@@ -49,6 +49,13 @@
   font-family: "Sniglet";
 }
 
+@media screen and (min-width: 1200px) {
+  .avatar {
+    height: 5rem;
+    margin-left: 14rem;
+    margin-top: -4rem;
+  }
+}
 @media screen and (max-width: 480px) {
   body {
     background-size: cover;
@@ -102,7 +109,8 @@
 
 .avatar {
   height: 5rem;
-  margin-left: 2rem;
+  margin-left: 20rem;
+  margin-top: -4rem;
 }
 
 .Header {

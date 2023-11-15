@@ -16,7 +16,7 @@ export default function Image({ film }) {
         />
         <div className={styles.Timer}>
           <Timer setNext={setNext} next={next} />
-          <p className={styles.titleMovie}>{film.title} </p>
+          <p className={styles.titleMovie}> </p>
         </div>
       </div>
     </div>
