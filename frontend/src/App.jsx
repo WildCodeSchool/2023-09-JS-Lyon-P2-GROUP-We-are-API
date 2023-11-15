@@ -87,6 +87,11 @@ function App() {
             />
           ) : null}
         </main>
+        <footer className={styles.appFooter}>
+          <p className={styles.textFooter}>
+            © 2023 API Quiz. All Rights Reserved
+          </p>
+        </footer>
       </div>
       <div className={styles.appMenu}>
         <select
@@ -98,9 +103,6 @@ function App() {
           <option value="/synopsis">Synopsis</option>
         </select>
       </div>
-      <footer>
-        <p>© 2023 API Quiz. All Rights Reserved</p>
-      </footer>
     </div>
   );
 }
