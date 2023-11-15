@@ -28,8 +28,10 @@ export default function Timer() {
 
   return (
     <div>
-      <div>{Math.round(((100 - filled) / 1000) * chrono)}</div>
       <div className={styles.container}>
+        <p className={styles.chrono}>
+          {Math.round(((100 - filled) / 1000) * chrono)}
+        </p>
         <div className={styles.progressBar}>
           <div
             className={styles.fillBar}

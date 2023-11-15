@@ -44,7 +44,13 @@
 .retry {
   @include font;
 }
-
+@media screen and (min-width: 1200px) {
+  .avatar {
+    height: 5rem;
+    margin-left: 43%;
+    margin-top: -4rem;
+  }
+}
 @media screen and (max-width: 480px) {
   body {
     @include backgroundStyle;
@@ -95,7 +101,8 @@
 }
 .avatar {
   height: 5rem;
-  margin-left: 2rem;
+  margin-left: 43%;
+  margin-top: -4rem;
 }
 .Header {
   display: flex;
