@@ -14,7 +14,6 @@ export default function Image({ film, reset }) {
         <div className={styles.Timer}>
           {reset.current === true ? <Timer /> : null}
           <p className={styles.titleMovie}> </p>
-
         </div>
       </div>
     </div>

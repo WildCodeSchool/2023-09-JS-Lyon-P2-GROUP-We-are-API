@@ -28,7 +28,6 @@ export default function Timer() {
 
   return (
     <div>
-      <div>{Math.round(((100 - filled) / 1000) * chrono)}</div>
       <div className={styles.container}>
         <div className={styles.progressBar}>
           <div
@@ -38,6 +37,7 @@ export default function Timer() {
               backgroundColor: getColor(),
             }}
           />
+          {Math.round(((100 - filled) / 1000) * chrono)}
         </div>
       </div>
     </div>
