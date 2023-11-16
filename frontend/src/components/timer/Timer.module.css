@@ -3,7 +3,7 @@
   flex-direction: column;
   margin-bottom: 10%;
   position: absolute;
-  width: 30%;
+  width: 45%;
 }
 
 .chrono {
@@ -27,4 +27,4 @@
   #chronos {
     margin-left: 0;
   }
-} /*# sourceMappingURL=Timer.module.css.map */
+}/*# sourceMappingURL=Timer.module.css.map */
