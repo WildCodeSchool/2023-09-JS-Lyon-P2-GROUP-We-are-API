@@ -32,8 +32,8 @@ body {
   right: 0;
   position: absolute;
   flex-direction: column;
-  width: 33vh;
-  height: 69vh;
+  width: 30%;
+  height: 70%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #ffffff;
@@ -68,4 +68,12 @@ body {
   font-family: "Sniglet";
   font-size: 2rem;
   text-align: center;
+}
+
+.Avatar {
+  height: 70%;
+}
+
+.avatarDiv {
+  margin: -10%;
 }/*# sourceMappingURL=UserId.module.css.map */

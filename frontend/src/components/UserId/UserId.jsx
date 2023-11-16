@@ -38,7 +38,7 @@ function UserId({ setStateUserId, setAvatarSelected }) {
           onAvatarSelected={handleAvatarSelected}
         />
         {selectedAvatar !== null && (
-          <div>
+          <div className={styles.avatarDiv}>
             <img
               className={styles.Avatar}
               src={selectedAvatar}
