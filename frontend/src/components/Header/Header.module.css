@@ -1,48 +1,61 @@
 .header {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   justify-content: center;
-  padding-top: 1.5rem;
 }
 
-.theUser,
-.theScore {
-  font-family: "Sniglet";
-  font-size: 2rem;
-  color: #202c55;
-  margin-left: 1rem;
-  margin-right: 1rem;
+.logoText {
+  font-size: 3rem;
 }
 
 .userAndScore {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0.5rem;
-  height: 4rem;
+  width: 70%;
+  justify-content: space-around;
+  position: absolute;
+  margin-top: 5%;
+  padding-top: 1%;
 }
 
-.logoText {
-  margin: 1rem;
-  font-size: 3.5rem;
+.userInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (min-width: 480px) {
-  .theUser,
-  .theScore {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 2.2rem;
+p:first-child {
+  margin-left: 1%;
+}
+
+.theUser {
+  font-size: 3rem;
+  margin-left: 50%;
+}
+
+.theScore {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    display: flex;
+  }
+  .userInfo {
+    display: flex;
+    flex-direction: column;
   }
   .userAndScore {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 30%;
   }
-  .header {
-    padding: 0;
-    margin: 0;
+  .theUser {
+    font-size: 2rem;
   }
-  .logoText {
-    font-size: 3.8rem;
-    margin: 0;
+  .theScore {
+    font-size: 2rem;
   }
-} /*# sourceMappingURL=Header.module.css.map */
+  p:first-child {
+    margin-left: 8%;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

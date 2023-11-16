@@ -25,7 +25,7 @@ function AvatarPicker({ setSelectedAvatar, onAvatarSelected }) {
               key={avatarUrl}
               src={avatarUrl}
               alt={`Avatar ${avatarUrl}`}
-              className={styles["img-avatar"]}
+              className={styles.imgAvatar}
               onClick={() => handleAvatarClick(avatarUrl)}
             />
           ))
