@@ -13,7 +13,10 @@ function App() {
   const [answersReturn, setAnswersReturn] = useState(true);
   // État local pour gérer le pseudo de l'utilisateur
   const [userId, setUserId] = useState(null);
-  const [film, setFilm] = useState();
+  const [film, setFilm] = useState({
+    backdrop_path: "xxx",
+    original_language: "en",
+  });
   const [score, setScore] = useState(0);
   const [check, setCheck] = useState(false);
   const [please, setPlease] = useState(false);
@@ -26,6 +29,16 @@ function App() {
 
   return (
     <div className={styles.appAllContainer}>
+      {answersReturn === true ? (
+        <Api
+          film={film}
+          setFilm={setFilm}
+          setAnswersReturn={setAnswersReturn}
+          setNext={setNext}
+          reset={reset}
+          setPlease={setPlease}
+        />
+      ) : null}
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
@@ -40,16 +53,6 @@ function App() {
           </div>
         </div>
         <div className={styles.appBody}>
-          {answersReturn === true ? (
-            <Api
-              film={film}
-              setFilm={setFilm}
-              setAnswersReturn={setAnswersReturn}
-              setNext={setNext}
-              reset={reset}
-              setPlease={setPlease}
-            />
-          ) : null}
           {film !== null ? (
             <Image
               film={film}
