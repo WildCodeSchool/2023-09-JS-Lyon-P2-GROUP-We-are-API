@@ -25,6 +25,7 @@
 }
 .retry {
   @include font;
+  margin: 1%;
 }
 body {
   @include backgroundStyle;

@@ -76,4 +76,10 @@ body {
 
 .avatarDiv {
   margin: -10%;
+}
+
+@media screen and (max-width: 480px) {
+  .user-container {
+    width: 50%;
+  }
 }/*# sourceMappingURL=UserId.module.css.map */

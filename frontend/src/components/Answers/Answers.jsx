@@ -36,7 +36,7 @@ export default function Answers({
               setValue(e.target.value);
             }}
           />
-          <div className="{style.Button-container">
+          <div className={styles.ButtonContainer}>
             <button
               className={styles.BTtest}
               type="button"
