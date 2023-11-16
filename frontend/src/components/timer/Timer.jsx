@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import styles from "./Timer.module.css";
 
 export default function Timer({ setNext }) {
-  const chrono = 100;
+  const chrono = 1;
   const [filled, setFilled] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
     if (filled < 100 && isRunning) {
-      setTimeout(() => setFilled((prev) => prev + 1), chrono);
+      setTimeout(() => setFilled((prev) => prev + 0.015), chrono);
     } else {
       setFilled(0);
       setIsRunning(false);
@@ -31,8 +31,8 @@ export default function Timer({ setNext }) {
   return (
     <div>
       <div className={styles.container}>
-        <p className={styles.chrono}>
-          {Math.round(((100 - filled) / 1000) * chrono)}
+        <p className={styles.chrono} id="chronos">
+          {Math.round((10 - filled / 10) * chrono)}
         </p>
         <div className={styles.progressBar}>
           <div

@@ -3,12 +3,24 @@
   justify-content: center;
 }
 
-.img-avatar {
-  height: 3rem;
+.imgAvatar {
+  margin-bottom: 10%;
+  height: 8rem;
   cursor: pointer;
 }
 
 .text-avatar {
+  font-size: 3rem;
+  margin-bottom: 15%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .text-avatar {
+    font-size: 2rem;
+  }
+  .imgAvatar {
+    height: 5rem;
+  }
 } /*# sourceMappingURL=Avatar.module.css.map */

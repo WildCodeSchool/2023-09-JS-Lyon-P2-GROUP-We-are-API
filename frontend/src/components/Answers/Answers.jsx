@@ -21,17 +21,22 @@ export default function Answers({
   // test
   return (
     <div className={styles.appAnswer}>
-      <div className={styles.form}>
-        <form className={styles.form} onSubmit={(e) => valueChecked(e)}>
+      <div className={styles.forme}>
+        <form
+          className={styles.form}
+          autoComplete="off"
+          onSubmit={(e) => valueChecked(e)}
+        >
           <input
             type="text"
             id="response"
+            className={styles.input}
             value={value}
             onChange={(e) => {
               setValue(e.target.value);
             }}
           />
-          <div className="{style.Button-container">
+          <div className={styles.ButtonContainer}>
             <button
               className={styles.BTtest}
               type="button"

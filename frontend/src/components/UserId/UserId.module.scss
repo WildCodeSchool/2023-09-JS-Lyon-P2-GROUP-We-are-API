@@ -31,8 +31,8 @@ body {
   right: 0;
   position: absolute;
   flex-direction: column;
-  width: 33vh;
-  height: 69vh;
+  width: 30%;
+  height: 70%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #ffffff;
@@ -51,6 +51,8 @@ body {
   width: 15rem;
   border-radius: 4px;
   text-align: center;
+  font-size: 3rem;
+  margin-top: 10%;
 }
 
 .user-Message {
@@ -61,6 +63,17 @@ body {
 .user-text {
   margin: 0;
   font-family: "Sniglet";
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
+}
+.Avatar {
+  height: 70%;
+}
+.avatarDiv {
+  margin: -10%;
+}
+@media screen and (max-width: 480px) {
+  .user-container {
+    width: 50%;
+  }
 }

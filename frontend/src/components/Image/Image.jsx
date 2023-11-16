@@ -15,7 +15,6 @@ export default function Image({ film, reset, userId, setNext, next }) {
           {reset.current === true && userId !== null && next === false ? (
             <Timer setNext={setNext} />
           ) : null}
-          <p className={styles.titleMovie}>{film.title} </p>
         </div>
       </div>
     </div>

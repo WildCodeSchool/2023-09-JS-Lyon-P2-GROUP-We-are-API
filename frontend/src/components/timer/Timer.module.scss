@@ -1,39 +1,27 @@
 .container {
-  width: 60%;
-  height: 3%;
-  position: absolute;
-}
-.progressBar {
-  width: 66.4vw;
-  height: 100%;
   display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  position: absolute;
+  width: 45%;
+}
+.chrono {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  position: absolute;
+  margin: 0;
 }
 .fillBar {
   width: 100%;
-  height: 100%;
-  transition: width 0.5s ease-out;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  height: 2rem;
+  z-index: 1;
 }
-.chrono {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  position: absolute;
-}
-@media screen and (min-width: 1200px) {
-  .progressBar {
-    width: 49.1vw;
-    height: 100%;
-    display: flex;
-    z-index: 1;
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
   }
-  .chrono {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    width: 77%;
-    position: absolute;
+  #chronos {
+    margin-left: 0;
   }
 }
