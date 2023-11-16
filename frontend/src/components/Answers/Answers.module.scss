@@ -1,5 +1,5 @@
 @import "../../Utilities.scss";
-.form{
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,15 +7,14 @@
   z-index: 1;
   width: 100%;
 }
-.input{
-width: 100%;
-height: 2rem;
-border-radius: 5px;
-border: solid 1px;
-font-size: 2rem;
-
+.input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  border: solid 1px;
+  font-size: 2rem;
 }
-.BTtest{
+.BTtest {
   height: 3rem;
   width: 10rem;
   border: none;
@@ -30,49 +29,49 @@ font-size: 2rem;
   margin-top: 10%;
   margin-left: 10%;
 }
-.ButtonContainer{
+.ButtonContainer {
   width: 110%;
 }
-.appAnswer{
+.appAnswer {
   //background-color: red;
   display: flex;
   justify-content: center;
   margin-right: 10%;
 }
-.forme{
+.forme {
   //background-color: green;
   width: 60%;
 }
 
 @media screen and (max-width: 480px) {
-.appAnswer{
-  margin-top: 9%;
-  width: 100%;
-}
-.form{
-  display: flex;
-}
-.BTtest{
-  height: 2rem;
-  width: 7rem;
-  border: none;
-  border-radius: 5px;
-  box-shadow: #7474d6 0px 3px 8px;
-  background-color: #7474d6;
-  color: rgb(255, 252, 252);
-  font-weight: 900;
-  font-size: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 10%;
-}
-.appAnswer{
-  margin-right: 0%;
-}
-.input{
-  width: 140%;
-}
-.ButtonContainer{
-  width: 140%;
-}
+  .appAnswer {
+    margin-top: 9%;
+    width: 100%;
+  }
+  .form {
+    display: flex;
+  }
+  .BTtest {
+    height: 2rem;
+    width: 7rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #7474d6 0px 3px 8px;
+    background-color: #7474d6;
+    color: rgb(255, 252, 252);
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10%;
+  }
+  .appAnswer {
+    margin-right: 0%;
+  }
+  .input {
+    width: 140%;
+  }
+  .ButtonContainer {
+    width: 140%;
+  }
 }

@@ -8,7 +8,12 @@ export default function Next({ setAnswersReturn, reset }) {
     element.current = false;
   }
   return (
-    <button id="BTnext" className={styles.BTNext} type="button" onClick={() => rest()}>
+    <button
+      id="BTnext"
+      className={styles.BTNext}
+      type="button"
+      onClick={() => rest()}
+    >
       Next
     </button>
   );

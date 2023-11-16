@@ -6,21 +6,21 @@
     local("Sniglet"),
     url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
 }
-.avatar{
+.avatar {
   height: 8rem;
 }
-.appBody{
+.appBody {
   //background-color: red;
   display: flex;
   flex-direction: column;
   margin-right: 10%;
-  width: 100%
+  width: 100%;
 }
-.appAllContainer{
+.appAllContainer {
   display: flex;
   justify-content: center;
 }
-.appAll{
+.appAll {
   width: 50%;
 }
 .retry {
@@ -32,31 +32,26 @@ body {
   background-image: url("./src/assets/bouboulesDesktop.png");
   object-fit: cover;
 }
-  
 
 @media screen and (max-width: 480px) {
   body {
     @include backgroundStyle;
     background-image: url("./src/assets/bouboulesMobile.png");
   }
-.appAllContainer{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
+  .appAllContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .appAll {
+    width: 80%;
+  }
+  .avatar {
+    height: 5rem;
+  }
+  .appBody {
+    margin: 0;
+    align-items: center;
+  }
 }
-.appAll{
-  width: 80%;
-}
-.avatar{
-  height: 5rem;
-}
-.appBody{
-  margin: 0;
-  align-items: center;
-}
-
-}
-
-
- 

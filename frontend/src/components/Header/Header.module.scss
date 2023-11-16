@@ -1,14 +1,14 @@
 @import "../../Utilities.scss";
-.header{
-display: flex;
-flex-direction: row;
-width: 100%;
-justify-content: center;
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }
-.logoText{
+.logoText {
   font-size: 3rem;
 }
-.userAndScore{
+.userAndScore {
   display: flex;
   width: 70%;
   justify-content: space-around;
@@ -16,39 +16,39 @@ justify-content: center;
   margin-top: 7%;
   padding-top: 1%;
 }
-.userInfo{
+.userInfo {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-p:first-child{
-//margin-left: 10%;
+p:first-child {
+  //margin-left: 10%;
 }
-.theUser{
-font-size: 3rem;
-margin-left: 10%;
+.theUser {
+  font-size: 3rem;
+  margin-left: 10%;
 }
-.theScore{
-font-size: 3rem;
-margin-right: 8%;
+.theScore {
+  font-size: 3rem;
+  margin-right: 8%;
 }
 
 @media screen and (max-width: 480px) {
- .header{
-  display: flex;
- }
- .userInfo{
-  display: flex;
-  flex-direction: column;
- }
-.userAndScore{
-  margin-top: 30%;
-}
-.theUser{
-  font-size: 2rem;
+  .header {
+    display: flex;
   }
-  .theScore{
-  font-size: 2rem;
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .userAndScore {
+    margin-top: 30%;
+  }
+  .theUser {
+    font-size: 2rem;
+  }
+  .theScore {
+    font-size: 2rem;
   }
 }
