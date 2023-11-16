@@ -11,6 +11,7 @@
   font-size: 2rem;
   text-align: center;
   cursor: pointer;
+  font-family: "Sniglet";
 }
 
 @media screen and (max-width: 480px) {
@@ -26,5 +27,6 @@
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
+    font-family: "Sniglet";
   }
 } /*# sourceMappingURL=Next.module.css.map */

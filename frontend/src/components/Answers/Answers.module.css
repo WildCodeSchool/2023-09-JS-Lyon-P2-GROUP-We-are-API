@@ -13,6 +13,11 @@
   border-radius: 5px;
   border: solid 1px;
   font-size: 2rem;
+  font-family: "Sniglet";
+  color: #7474d6;
+  box-shadow: -1px -1px 10px #7474d6;
+  transition: 0.1s;
+  transition-property: box-shadow;
 }
 
 .BTtest {
@@ -29,6 +34,7 @@
   cursor: pointer;
   margin-top: 10%;
   margin-left: 10%;
+  font-family: "Sniglet";
 }
 
 .ButtonContainer {

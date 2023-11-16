@@ -7,6 +7,7 @@
 }
 .logoText {
   font-size: 3rem;
+  font-family: "Sniglet";
 }
 .userAndScore {
   display: flex;
@@ -16,22 +17,28 @@
   margin-top: 7%;
   padding-top: 1%;
 }
+
+#logo {
+  scale: 0.5;
+}
 .userInfo {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-p:first-child {
-  //margin-left: 10%;
-}
+
 .theUser {
   font-size: 3rem;
   margin-left: 10%;
+  font-family: "Sniglet";
+  color: #7474d6;
 }
 .theScore {
   font-size: 3rem;
   margin-right: 8%;
+  font-family: "Sniglet";
+  color: #7474d6;
 }
 
 @media screen and (max-width: 480px) {

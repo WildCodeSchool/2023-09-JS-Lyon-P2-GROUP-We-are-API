@@ -8,7 +8,7 @@ export default function Timer({ setNext }) {
   const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
     if (filled < 100 && isRunning) {
-      setTimeout(() => setFilled((prev) => prev + 0.015), chrono);
+      setTimeout(() => setFilled((prev) => prev + 0.032), chrono);
     } else {
       setFilled(0);
       setIsRunning(false);
