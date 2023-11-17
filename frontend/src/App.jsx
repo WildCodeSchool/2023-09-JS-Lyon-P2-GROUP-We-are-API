@@ -28,6 +28,7 @@ function App() {
   };
   const navigate = useNavigate();
   const [timeDifficulty, setTimeDifficulty] = useState("20");
+  const [burger, setBurger] = useState(false);
 
   return (
     <div className={styles.appAllContainer}>
@@ -35,10 +36,10 @@ function App() {
         id={styles.difficulty}
         onChange={(e) => setTimeDifficulty(e.target.value)}
       >
-        <option value="">--Quelle difficulté ?--</option>
-        <option value="30">facile (30s)</option>
-        <option value="20">moyen (20s)</option>
-        <option value="10">difficile (10s)</option>
+        <option value="">--Difficulty ?--</option>
+        <option value="30">easy (30s)</option>
+        <option value="20">medium (20s)</option>
+        <option value="10">hard (10s)</option>
       </select>
       {answersReturn === true ? (
         <Api
@@ -107,10 +108,32 @@ function App() {
           className={styles.dropDownMenu}
           onChange={(e) => navigate(e.target.value)}
         >
-          <option value="">Choose the theme</option>
-          <option value="/images">Images</option>
+          <option value="">--Theme ?--</option>
+          <option value="/images">Image</option>
           <option value="/synopsis">Synopsis</option>
         </select>
+        <button
+          id={styles.buttonBurger}
+          type="button"
+          onClick={() => setBurger((prevState) => !prevState)}
+        >
+          ?
+        </button>
+        {burger === true ? (
+          <div className={styles.burgerMenu}>
+            <select onChange={(e) => setTimeDifficulty(e.target.value)}>
+              <option value="">--difficulty ?--</option>
+              <option value="30">easy (30s)</option>
+              <option value="20">medium (20s)</option>
+              <option value="10">hard (10s)</option>
+            </select>
+            <select onChange={(e) => navigate(e.target.value)}>
+              <option value="">--Theme ?--</option>
+              <option value="/images">Image</option>
+              <option value="/synopsis">Synopsis</option>
+            </select>
+          </div>
+        ) : null}
       </div>
     </div>
   );

@@ -59,6 +59,10 @@ body {
   left: 2%;
 }
 
+#buttonBurger {
+  display: none;
+}
+
 @media screen and (max-width: 498px) {
   body {
     @include backgroundStyle;
@@ -72,10 +76,47 @@ body {
   }
 
   #difficulty {
-    height: fit-content;
-    zoom: 2;
+    display: none;
+  }
+
+  #buttonBurger {
+    display: block;
+    height: 30px;
+    width: 30px;
     position: fixed;
-    top: 5%;
-    left: 5%;
+    top: 3%;
+    right: 5%;
+    background-color: hsl(240, 54%, 90%);
+    border: 1px solid #7474d6;
+    color: #7474d6;
+    font-size: 1.5rem;
+    font-family: "Sniglet";
+  }
+
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    background-color: hsl(240, 54%, 90%);
+    border: 1px solid #7474d6;
+    border-radius: 10px;
+    padding: 5%;
+    box-shadow: 0px 5px 5px 5px hsl(240, 54%, 80%);
+
+    select {
+      height: 2rem;
+      border-radius: 5px;
+      border: 2px solid #7474d6;
+      background-color: rgb(255, 252, 252);
+      color: #7474d6;
+      font-size: 1.2rem;
+      font-family: "Sniglet";
+      margin-bottom: 100%;
+      text-align: center;
+    }
   }
 }
