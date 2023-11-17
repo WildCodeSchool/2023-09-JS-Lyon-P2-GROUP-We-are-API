@@ -2,7 +2,14 @@ import PropTypes from "prop-types";
 import styles from "./Image.module.css";
 import Timer from "../timer/Timer";
 
-export default function Image({ film, reset, userId, setNext, next }) {
+export default function Image({
+  film,
+  reset,
+  userId,
+  setNext,
+  next,
+  timeDifficulty,
+}) {
   return (
     <div className={styles.TimerContainer}>
       <div className={styles.imgContainer}>
@@ -13,7 +20,7 @@ export default function Image({ film, reset, userId, setNext, next }) {
         />
         <div className={styles.Timer}>
           {reset.current === true && userId !== null && next === false ? (
-            <Timer setNext={setNext} />
+            <Timer setNext={setNext} timeDifficulty={timeDifficulty} />
           ) : null}
         </div>
       </div>
@@ -46,6 +53,7 @@ Image.propTypes = {
   }),
   setNext: PropTypes.func.isRequired,
   next: PropTypes.func.isRequired,
+  timeDifficulty: PropTypes.number.isRequired,
   reset: PropTypes.exact({
     current: PropTypes.bool.isRequired,
   }),
