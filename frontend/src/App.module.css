@@ -66,4 +66,12 @@ body {
     margin: 0;
     align-items: center;
   }
+}
+#difficulty {
+  height: -moz-fit-content;
+  height: fit-content;
+  zoom: 2;
+  position: fixed;
+  top: 5%;
+  left: 5%;
 } /*# sourceMappingURL=App.module.css.map */
