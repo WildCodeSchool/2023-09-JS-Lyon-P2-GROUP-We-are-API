@@ -2,13 +2,19 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styles from "./Timer.module.css";
 
-export default function Timer({ setNext }) {
+export default function Timer({ setNext, timeDifficulty }) {
   const chrono = 33.3;
   const [filled, setFilled] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
     if (filled < 100 && isRunning) {
-      setTimeout(() => setFilled((prev) => prev + 0.333), chrono);
+      setTimeout(
+        () =>
+          setFilled(
+            (prev) => prev + (0.333 / parseInt(timeDifficulty, 10)) * 10
+          ),
+        chrono
+      );
     } else {
       setFilled(0);
       setIsRunning(false);
@@ -32,7 +38,7 @@ export default function Timer({ setNext }) {
     <div>
       <div className={styles.container}>
         <p className={styles.chrono} id="chronos">
-          {Math.round(10 - filled / 10)}
+          {Math.round(timeDifficulty - timeDifficulty * (filled / 100))}
         </p>
         <div className={styles.progressBar}>
           <div
@@ -50,4 +56,5 @@ export default function Timer({ setNext }) {
 
 Timer.propTypes = {
   setNext: PropTypes.func.isRequired,
+  timeDifficulty: PropTypes.number.isRequired,
 };

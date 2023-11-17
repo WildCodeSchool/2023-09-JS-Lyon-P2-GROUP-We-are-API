@@ -1,8 +1,6 @@
 @font-face {
   font-family: "Sniglet";
-  src:
-    local("Sniglet"),
-    url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
+  src: local("Sniglet"), url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
 }
 .avatar {
   height: 8rem;
@@ -39,7 +37,7 @@ body {
   background-attachment: fixed;
   background-image: url("./src/assets/bouboulesDesktop.png");
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 480px) {
@@ -66,4 +64,12 @@ body {
     margin: 0;
     align-items: center;
   }
-} /*# sourceMappingURL=App.module.css.map */
+}
+#difficulty {
+  height: -moz-fit-content;
+  height: fit-content;
+  zoom: 2;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+}/*# sourceMappingURL=App.module.css.map */

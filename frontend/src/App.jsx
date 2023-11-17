@@ -26,9 +26,19 @@ function App() {
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
+  const [timeDifficulty, setTimeDifficulty] = useState("20");
 
   return (
     <div className={styles.appAllContainer}>
+      <select
+        id={styles.difficulty}
+        onChange={(e) => setTimeDifficulty(e.target.value)}
+      >
+        <option value="">--Quelle difficulté ?--</option>
+        <option value="30">facile (30s)</option>
+        <option value="20">moyen (20s)</option>
+        <option value="10">difficile (10s)</option>
+      </select>
       {answersReturn === true ? (
         <Api
           film={film}
@@ -60,6 +70,7 @@ function App() {
               userId={userId}
               setNext={setNext}
               next={next}
+              timeDifficulty={timeDifficulty}
             />
           ) : (
             <p>loading</p>
