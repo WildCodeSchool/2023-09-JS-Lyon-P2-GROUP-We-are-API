@@ -1,21 +1,25 @@
 @import "../../Utilities.scss";
 .header {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
 }
 .logoText {
   font-size: 3rem;
   font-family: "Sniglet";
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+  margin: 0;
 }
 .userAndScore {
   display: flex;
-  width: 70%;
-  justify-content: space-around;
-  position: absolute;
-  margin-top: 7%;
-  padding-top: 1%;
+  width: 100%;
+  justify-content: space-between;
+  height: 20vh;
+  align-items: center;
 }
 
 #logo {
@@ -29,33 +33,21 @@
 }
 
 .theUser {
-  font-size: 3rem;
-  margin-left: 10%;
+  font-size: 2rem;
   font-family: "Sniglet";
   color: #7474d6;
+  width: 30%;
+  text-align: center;
 }
 .theScore {
-  font-size: 3rem;
-  margin-right: 8%;
+  font-size: 2rem;
   font-family: "Sniglet";
   color: #7474d6;
+  width: 30%;
+  text-align: center;
 }
 
-@media screen and (max-width: 480px) {
-  .header {
-    display: flex;
-  }
-  .userInfo {
-    display: flex;
-    flex-direction: column;
-  }
-  .userAndScore {
-    margin-top: 30%;
-  }
-  .theUser {
-    font-size: 2rem;
-  }
-  .theScore {
-    font-size: 2rem;
-  }
+.avatar {
+  width: 20%;
+  height: fit-content;
 }

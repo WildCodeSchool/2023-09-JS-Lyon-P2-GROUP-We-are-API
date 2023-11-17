@@ -50,5 +50,6 @@ Synopsis.propTypes = {
   reset: PropTypes.exact({
     current: PropTypes.bool.isRequired,
   }),
+  timeDifficulty: PropTypes.string.isRequired,
   userId: PropTypes.func.isRequired,
 };

@@ -1,5 +1,11 @@
 .synopsisText {
-  color: #202C55;
+  color: #202c55;
   font-size: 1.5rem;
   font-family: "Sniglet";
-}/*# sourceMappingURL=Synopsis.module.css.map */
+  height: 40vh;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  display: flex;
+  align-items: center;
+} /*# sourceMappingURL=Synopsis.module.css.map */

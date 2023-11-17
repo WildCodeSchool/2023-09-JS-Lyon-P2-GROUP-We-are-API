@@ -52,16 +52,11 @@ function App() {
       ) : null}
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
-          <Header userId={userId} score={score} />
-          <div className={styles.divavatar}>
-            {selectedAvatar !== null && (
-              <img
-                className={styles.avatar}
-                src={selectedAvatar}
-                alt="Avatar sélectionné"
-              />
-            )}
-          </div>
+          <Header
+            userId={userId}
+            score={score}
+            selectedAvatar={selectedAvatar}
+          />
         </div>
         <div className={styles.appBody}>
           {film !== null ? (
