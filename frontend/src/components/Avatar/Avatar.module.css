@@ -12,7 +12,8 @@
 .text-avatar {
   font-size: 3rem;
   margin-bottom: 15%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-family: "Sniglet";
 }
 
@@ -24,4 +25,4 @@
   .imgAvatar {
     height: 5rem;
   }
-}/*# sourceMappingURL=Avatar.module.css.map */
+} /*# sourceMappingURL=Avatar.module.css.map */
