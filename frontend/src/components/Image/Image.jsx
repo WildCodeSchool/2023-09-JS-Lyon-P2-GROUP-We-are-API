@@ -11,19 +11,15 @@ export default function Image({
   timeDifficulty,
 }) {
   return (
-    <div className={styles.TimerContainer}>
-      <div className={styles.imgContainer}>
-        <img
-          className={styles.appImg}
-          src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
-          alt="Film a trouver"
-        />
-        <div className={styles.Timer}>
-          {reset.current === true && userId !== null && next === false ? (
-            <Timer setNext={setNext} timeDifficulty={timeDifficulty} />
-          ) : null}
-        </div>
-      </div>
+    <div className={styles.imgContainer}>
+      <img
+        className={styles.appImg}
+        src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
+        alt="Film a trouver"
+      />
+      {reset.current === true && userId !== null && next === false ? (
+        <Timer setNext={setNext} timeDifficulty={timeDifficulty} />
+      ) : null}
     </div>
   );
 }
