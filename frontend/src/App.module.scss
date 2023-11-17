@@ -59,7 +59,7 @@ body {
   left: 2%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   body {
     @include backgroundStyle;
     background-image: url("./src/assets/bouboulesMobile.png");

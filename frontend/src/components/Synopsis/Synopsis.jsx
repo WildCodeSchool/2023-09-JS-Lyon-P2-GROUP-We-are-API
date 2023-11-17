@@ -2,13 +2,20 @@ import PropTypes from "prop-types";
 import Timer from "../timer/Timer";
 import styles from "./Synopsis.module.css";
 
-export default function Synopsis({ film, reset, userId, setNext, next }) {
+export default function Synopsis({
+  film,
+  reset,
+  userId,
+  setNext,
+  next,
+  timeDifficulty,
+}) {
   return (
     <div>
       <p className={styles.synopsisText}>{`${film.overview}`}</p>
       <div>
         {reset.current === true && userId !== null && next === false ? (
-          <Timer setNext={setNext} />
+          <Timer setNext={setNext} timeDifficulty={timeDifficulty} />
         ) : null}
       </div>
     </div>

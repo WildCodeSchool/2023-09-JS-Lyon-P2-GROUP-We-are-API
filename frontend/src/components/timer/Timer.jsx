@@ -8,13 +8,10 @@ export default function Timer({ setNext, timeDifficulty }) {
   const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
     if (filled < 100 && isRunning) {
-      setTimeout(
-        () =>
-          setFilled(
-            (prev) => prev + (0.333 / parseInt(timeDifficulty, 10)) * 10
-          ),
-        chrono
-      );
+      setTimeout(() => {
+        console.log(timeDifficulty);
+        setFilled((prev) => prev + (0.333 / parseInt(timeDifficulty, 10)) * 10);
+      }, chrono);
     } else {
       setFilled(0);
       setIsRunning(false);

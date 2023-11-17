@@ -1,10 +1,16 @@
+.avatar-selector{
+  width: 100%;
+}
+
 .avatar-list {
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-bottom: 5%;
 }
 .imgAvatar {
-  margin-bottom: 10%;
-  height: 8rem;
+  width: 20%;
+  height: auto;
   cursor: pointer;
 }
 .text-avatar {
@@ -18,8 +24,5 @@
   .text-avatar {
     font-size: 2rem;
     font-family: "Sniglet";
-  }
-  .imgAvatar {
-    height: 5rem;
   }
 }
