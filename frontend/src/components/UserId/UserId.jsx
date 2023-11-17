@@ -38,7 +38,7 @@ function UserId({ setStateUserId, setAvatarSelected }) {
           onAvatarSelected={handleAvatarSelected}
         />
         {selectedAvatar !== null && (
-          <div>
+          <div className={styles.avatarDiv}>
             <img
               className={styles.Avatar}
               src={selectedAvatar}
@@ -47,11 +47,11 @@ function UserId({ setStateUserId, setAvatarSelected }) {
           </div>
         )}
         <div className={styles["user-pseudo"]}>
-          <h1 className={styles["user-text"]}>QUEL EST TON PSEUDO ?</h1>
+          <h1 className={styles["user-text"]}>WHAT IS YOUR USERNAME?</h1>
           <input
             type="text"
             className={styles["user-Input"]}
-            placeholder="Pseudo"
+            placeholder="username"
             onKeyDown={handleKeyDown}
           />
         </div>

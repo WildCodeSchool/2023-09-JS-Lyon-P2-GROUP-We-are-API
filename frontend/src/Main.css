@@ -1,4 +1,11 @@
 #root {
+<<<<<<< HEAD
   width: 100vw;
   height: 100vh;
 }/*# sourceMappingURL=Main.css.map */
+=======
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+} /*# sourceMappingURL=Main.css.map */
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0

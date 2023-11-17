@@ -1,51 +1,61 @@
 @import "../../Utilities.scss";
-
 .header {
-  text-align: center;
-  justify-content: center;
-  padding-top: 1.5rem;
-}
-
-.theUser,
-.theScore {
-  font-family: "Sniglet";
-  font-size: $fontSizeMain;
-  color: #202c55;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.userAndScore {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0.5rem;
+  width: 100%;
+  justify-content: center;
 }
-
 .logoText {
-  margin: 1rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
+  font-family: "Sniglet";
+}
+.userAndScore {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  position: absolute;
+  margin-top: 7%;
+  padding-top: 1%;
 }
 
-@media screen and (min-width: 480px) {
-  .theUser,
-  .theScore {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 2.2rem;
+#logo {
+  scale: 0.5;
+}
+.userInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theUser {
+  font-size: 3rem;
+  margin-left: 10%;
+  font-family: "Sniglet";
+  color: #7474d6;
+}
+.theScore {
+  font-size: 3rem;
+  margin-right: 8%;
+  font-family: "Sniglet";
+  color: #7474d6;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    display: flex;
+  }
+  .userInfo {
+    display: flex;
+    flex-direction: column;
   }
   .userAndScore {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 30%;
   }
-
-  .header {
-    padding: 0;
-    margin: 0;
+  .theUser {
+    font-size: 2rem;
   }
-
-  .logoText {
-    font-size: 3.8rem;
-    margin: 0;
+  .theScore {
+    font-size: 2rem;
   }
 }

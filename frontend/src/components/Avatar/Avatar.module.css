@@ -1,8 +1,32 @@
 .avatar-list {
   display: flex;
+  justify-content: center;
 }
 
-.img-avatar {
-  height: 3rem;
+.imgAvatar {
+  margin-bottom: 10%;
+  height: 8rem;
   cursor: pointer;
+<<<<<<< HEAD
 }/*# sourceMappingURL=Avatar.module.css.map */
+=======
+}
+
+.text-avatar {
+  font-size: 3rem;
+  margin-bottom: 15%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Sniglet";
+}
+
+@media screen and (max-width: 480px) {
+  .text-avatar {
+    font-size: 2rem;
+    font-family: "Sniglet";
+  }
+  .imgAvatar {
+    height: 5rem;
+  }
+} /*# sourceMappingURL=Avatar.module.css.map */
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0

@@ -7,42 +7,30 @@
     url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Sniglet";
-  color: #202c55;
+.avatar {
+  height: 8rem;
 }
-
-.appAllContainer {
-  @include flexCenter;
-  width: 100vw;
-  height: 100vh;
-}
-
-.appAll {
-  @include flexCenter;
-  flex-direction: column;
-  width: 80vw;
-  height: 80vh;
-  gap: 2rem;
-}
-
-.appHeader {
-  width: 80vw;
-}
-
 .appBody {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
   width: 100%;
-  height: 100%;
-  box-sizing: border-box;
 }
-
+.appAllContainer {
+  display: flex;
+  justify-content: center;
+}
+.appAll {
+  width: 50%;
+}
 .retry {
   @include font;
+  margin: 1%;
+}
+body {
+  @include backgroundStyle;
+  background-image: url("./src/assets/bouboulesDesktop.png");
+  object-fit: cover;
 }
 
 .dropDownMenu {
@@ -59,6 +47,7 @@
     @include backgroundStyle;
     background-image: url("./src/assets/bouboulesMobile.png");
   }
+<<<<<<< HEAD
 }
 
 
@@ -66,28 +55,26 @@
   body {
     @include backgroundStyle;
     background-image: url("./src/assets/bouboulesDesktop.png");
+=======
+  .appAllContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
   }
-
   .appAll {
-    width: 50vw;
-    height: auto;
+    width: 80%;
   }
-
-  .appHeader {
-    width: 50vw;
-    margin: 0;
+  .avatar {
+    height: 5rem;
   }
-
   .appBody {
-    width: 50vw;
-    height: auto;
-    margin-bottom: 5vh;
-  }
-
-  .retry {
-    font-size: 1.3rem;
+    margin: 0;
+    align-items: center;
   }
 }
+<<<<<<< HEAD
 
 
 .blur {
@@ -114,3 +101,5 @@
   justify-content: space-around;
   align-items: center;
 }
+=======
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0

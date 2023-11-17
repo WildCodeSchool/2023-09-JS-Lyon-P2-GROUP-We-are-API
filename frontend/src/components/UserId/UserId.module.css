@@ -23,10 +23,6 @@ body {
 }
 
 .user-container {
-  margin: 18vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,8 +32,8 @@ body {
   right: 0;
   position: absolute;
   flex-direction: column;
-  width: 33vh;
-  height: 69vh;
+  width: 30%;
+  height: 70%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #ffffff;
@@ -52,13 +48,15 @@ body {
 }
 
 .user-Input {
-  margin-top: 10vh;
   background-color: #eee;
   padding: 12px;
   height: 3rem;
-  width: 10rem;
+  width: 15rem;
   border-radius: 4px;
   text-align: center;
+  font-size: 3rem;
+  margin-top: 10%;
+  font-family: "Sniglet";
 }
 
 .user-Message {
@@ -68,20 +66,29 @@ body {
 
 .user-text {
   margin: 0;
-  font-size: 1.5rem;
+  font-family: "Sniglet";
+  font-size: 2rem;
   text-align: center;
+  font-family: "Sniglet";
 }
 
-@media screen and (min-width: 1200px) {
-  .user-Message {
-    font-size: 1.6rem;
-  }
-  .user-text {
-    font-size: 2.5rem;
-  }
-}
 .Avatar {
+<<<<<<< HEAD
   margin: 2rem;
   height: 10rem;
   margin-left: 4rem;
 }/*# sourceMappingURL=UserId.module.css.map */
+=======
+  height: 70%;
+}
+
+.avatarDiv {
+  margin: -10%;
+}
+
+@media screen and (max-width: 480px) {
+  .user-container {
+    width: 50%;
+  }
+} /*# sourceMappingURL=UserId.module.css.map */
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0

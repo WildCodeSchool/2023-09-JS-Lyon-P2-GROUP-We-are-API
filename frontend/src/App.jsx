@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Outlet, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
+=======
+import React, { useState, useRef } from "react";
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
@@ -13,11 +17,15 @@ function App() {
   const [answersReturn, setAnswersReturn] = useState(true);
   // État local pour gérer le pseudo de l'utilisateur
   const [userId, setUserId] = useState(null);
-  const [film, setFilm] = useState();
+  const [film, setFilm] = useState({
+    backdrop_path: "xxx",
+    original_language: "en",
+  });
   const [score, setScore] = useState(0);
   const [check, setCheck] = useState(false);
   const [please, setPlease] = useState(false);
   const [next, setNext] = useState(false);
+  const reset = useRef(true);
   // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
@@ -26,6 +34,16 @@ function App() {
 
   return (
     <div className={styles.appAllContainer}>
+      {answersReturn === true ? (
+        <Api
+          film={film}
+          setFilm={setFilm}
+          setAnswersReturn={setAnswersReturn}
+          setNext={setNext}
+          reset={reset}
+          setPlease={setPlease}
+        />
+      ) : null}
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
@@ -40,16 +58,20 @@ function App() {
           </div>
         </div>
         <div className={styles.appBody}>
-          {answersReturn === true ? (
-            <Api
+          {film !== null ? (
+            <Image
               film={film}
-              setFilm={setFilm}
-              setAnswersReturn={setAnswersReturn}
+              reset={reset}
+              userId={userId}
               setNext={setNext}
+              next={next}
             />
+<<<<<<< HEAD
           ) : null}
           {film !== null ? (
             <Outlet context={[film, setFilm]} />
+=======
+>>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
           ) : (
             <p>loading</p>
           )}
@@ -76,11 +98,12 @@ function App() {
             setAnswers={setAnswers}
             setCheck={setCheck}
             next={next}
+            reset={reset}
           />
           {please === true ? (
             <p className={styles.retry}>Please retry</p>
           ) : null}
-          {userId === null ? (
+          {userId === null || selectedAvatar === null ? (
             <UserId
               setStateUserId={handleUserIdEntered}
               setAvatarSelected={setSelectedAvatar}
