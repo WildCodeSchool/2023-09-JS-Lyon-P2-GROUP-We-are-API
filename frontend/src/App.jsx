@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { Outlet, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
-=======
 import React, { useState, useRef } from "react";
->>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
@@ -59,19 +55,7 @@ function App() {
         </div>
         <div className={styles.appBody}>
           {film !== null ? (
-            <Image
-              film={film}
-              reset={reset}
-              userId={userId}
-              setNext={setNext}
-              next={next}
-            />
-<<<<<<< HEAD
-          ) : null}
-          {film !== null ? (
-            <Outlet context={[film, setFilm]} />
-=======
->>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
+            <Outlet context={[film, reset, userId, next, setNext]} />
           ) : (
             <p>loading</p>
           )}

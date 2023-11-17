@@ -1,15 +1,25 @@
 import PropTypes from "prop-types";
+import Timer from "../timer/Timer";
+import styles from "./Synopsis.module.css";
 
-export default function Synopsis({ film }) {
+export default function Synopsis({ film, reset, userId, setNext, next }) {
   return (
     <div>
-      <p>{`${film.overview}`}</p>
+      <p className={styles.synopsisText}>{`${film.overview}`}</p>
+      <div>
+        {reset.current === true && userId !== null && next === false ? (
+          <Timer setNext={setNext} />
+        ) : null}
+      </div>
     </div>
   );
 }
 
 Synopsis.defaultProps = {
   film: { title: "Veuillez attendre votre film" },
+  reset: {
+    current: "waiting",
+  },
 };
 Synopsis.propTypes = {
   film: PropTypes.exact({
@@ -28,4 +38,10 @@ Synopsis.propTypes = {
     vote_average: PropTypes.number,
     vote_count: PropTypes.number,
   }),
+  setNext: PropTypes.func.isRequired,
+  next: PropTypes.func.isRequired,
+  reset: PropTypes.exact({
+    current: PropTypes.bool.isRequired,
+  }),
+  userId: PropTypes.func.isRequired,
 };

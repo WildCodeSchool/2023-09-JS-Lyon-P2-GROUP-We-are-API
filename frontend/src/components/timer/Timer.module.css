@@ -16,12 +16,6 @@
 
 .fillBar {
   width: 100%;
-<<<<<<< HEAD
-  height: 100%;
-  transition: width 0.5s ease-out;
-  background-color: green;
-}/*# sourceMappingURL=Timer.module.css.map */
-=======
   height: 2rem;
   z-index: 1;
 }
@@ -33,5 +27,4 @@
   #chronos {
     margin-left: 0;
   }
-} /*# sourceMappingURL=Timer.module.css.map */
->>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
+}/*# sourceMappingURL=Timer.module.css.map */

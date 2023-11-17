@@ -73,12 +73,6 @@ body {
 }
 
 .Avatar {
-<<<<<<< HEAD
-  margin: 2rem;
-  height: 10rem;
-  margin-left: 4rem;
-}/*# sourceMappingURL=UserId.module.css.map */
-=======
   height: 70%;
 }
 
@@ -90,5 +84,4 @@ body {
   .user-container {
     width: 50%;
   }
-} /*# sourceMappingURL=UserId.module.css.map */
->>>>>>> ef47ac564131035d67b8f18596b5ad437fc077a0
+}/*# sourceMappingURL=UserId.module.css.map */
