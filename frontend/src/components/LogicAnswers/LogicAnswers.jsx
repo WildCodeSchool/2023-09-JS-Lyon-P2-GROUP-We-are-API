@@ -62,6 +62,7 @@ export default function LogicAnswers({
     declinations(solution, arraySolution, ".,");
     declinations(solution, arraySolution, ";");
     declinations(solution, arraySolution, ",");
+    declinations(solution, arraySolution, "et");
     replace(solution, arraySolution, "&", "and");
     replace(solution, arraySolution, "&", "et");
     replace(solution, arraySolution, "é", "e");
@@ -76,6 +77,7 @@ export default function LogicAnswers({
     declinations(response, arrayResponse, ".,");
     declinations(response, arrayResponse, ";");
     declinations(response, arrayResponse, ",");
+    declinations(response, arrayResponse, "et");
     replace(response, arrayResponse, "&", "and");
     replace(response, arrayResponse, "&", "et");
     replace(response, arrayResponse, "é", "e");
