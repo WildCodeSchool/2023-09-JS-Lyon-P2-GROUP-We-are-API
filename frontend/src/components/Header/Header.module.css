@@ -19,7 +19,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  height: 20vh;
+  height: 10vh;
   align-items: center;
 }
 
@@ -51,7 +51,5 @@
 }
 
 .avatar {
-  width: 20%;
-  height: -moz-fit-content;
-  height: fit-content;
-} /*# sourceMappingURL=Header.module.css.map */
+  height: 100%;
+}/*# sourceMappingURL=Header.module.css.map */
