@@ -10,6 +10,7 @@ export default function Image({
   next,
   timeDifficulty,
 }) {
+  console.log("next = ", next);
   return (
     <div className={styles.imgContainer}>
       <img

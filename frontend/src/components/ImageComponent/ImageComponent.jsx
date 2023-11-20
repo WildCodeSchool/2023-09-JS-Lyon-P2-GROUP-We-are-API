@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import Image from "../Image/Image";
 
 function ImageComponent() {
-  const [film, reset, userId, next, setNext, timeDifficulty] =
+  const [film, reset, userId, setNext, next, timeDifficulty] =
     useOutletContext();
 
   return (

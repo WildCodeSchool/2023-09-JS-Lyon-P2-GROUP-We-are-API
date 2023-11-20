@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import Synopsis from "../Synopsis/Synopsis";
 
 function SynopsisComponent() {
-  const [film, reset, userId, next, setNext, timeDifficulty] =
+  const [film, reset, userId, setNext, next, timeDifficulty] =
     useOutletContext();
   return (
     <Synopsis

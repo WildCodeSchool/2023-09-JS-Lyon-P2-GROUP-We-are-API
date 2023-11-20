@@ -34,12 +34,9 @@
   text-align: center;
   font-size: 2rem;
   font-family: "Sniglet";
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: 30%;
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
   border-radius: 5px;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 body {
