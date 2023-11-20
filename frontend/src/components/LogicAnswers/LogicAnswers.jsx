@@ -12,6 +12,7 @@ export default function LogicAnswers({
   setPlease,
   setNext,
   next,
+  setColor,
 }) {
   const TOLERANCE_THRESHOLD = 0.8;
 
@@ -101,9 +102,11 @@ export default function LogicAnswers({
       setScore(score + 1);
       setPlease(false);
       setNext(true);
+      setColor(true);
     } else {
       setAnswersReturn(false);
       setPlease(true);
+      setColor(false);
     }
     setCheck(false);
   }, []);
@@ -129,6 +132,7 @@ LogicAnswers.propTypes = {
   }),
   score: PropTypes.number.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,
+  setColor: PropTypes.func.isRequired,
   setScore: PropTypes.func.isRequired,
   answers: PropTypes.string.isRequired,
   setCheck: PropTypes.func.isRequired,

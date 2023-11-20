@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
@@ -29,7 +29,7 @@ function App() {
   const navigate = useNavigate();
   const [timeDifficulty, setTimeDifficulty] = useState("20");
   const [burger, setBurger] = useState(false);
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState(false);
 
   function handleChangeMode(e) {
     setNext(true);
@@ -38,14 +38,13 @@ function App() {
     element.current = false;
     navigate(e.target.value);
   }
-  useEffect(() => {
-    if (please === true) {
-      setColor("#03b309");
-    } else if (please === false) {
-      setColor("red");
-    }
-  }, [please]);
 
+  function getColor() {
+    if (color === true) {
+      return "#03b309";
+    }
+    return "red";
+  }
   return (
     <div className={styles.appAllContainer}>
       <select
@@ -65,6 +64,7 @@ function App() {
           setNext={setNext}
           reset={reset}
           setPlease={setPlease}
+          setColor={setColor}
         />
       ) : null}
       <div className={styles.appAll}>
@@ -98,6 +98,7 @@ function App() {
               setPlease={setPlease}
               setNext={setNext}
               next={next}
+              setColor={setColor}
             />
           ) : null}
           <Answers
@@ -112,7 +113,7 @@ function App() {
             <p
               className={styles.response}
               style={{
-                color: { color },
+                color: getColor(),
               }}
             >
               {film.original_title}

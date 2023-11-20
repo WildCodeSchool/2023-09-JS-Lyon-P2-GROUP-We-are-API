@@ -1,7 +1,14 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-function Api({ setFilm, setAnswersReturn, setNext, reset, setPlease }) {
+function Api({
+  setFilm,
+  setAnswersReturn,
+  setNext,
+  reset,
+  setPlease,
+  setColor,
+}) {
   useEffect(() => {
     const aleaPage = Math.floor(Math.random() * 10) + 1; // génère un nombre aléatoire entre 1 et 10 pour choisir aléatoirement une page lors du fetch
     const alea = Math.floor(Math.random() * 19); // génère un nombre aléatoire entre 0 et 19 pour choisir un seul film dans le fichier issu du fetch
@@ -16,12 +23,14 @@ function Api({ setFilm, setAnswersReturn, setNext, reset, setPlease }) {
     setAnswersReturn(false);
     setNext(false);
     setPlease(false);
+    setColor(false);
     const element = reset;
     element.current = true;
   }, []);
 
   Api.propTypes = {
     setAnswersReturn: PropTypes.func.isRequired,
+    setColor: PropTypes.func.isRequired,
     setFilm: PropTypes.func.isRequired,
     setPlease: PropTypes.func.isRequired,
     reset: PropTypes.exact({
