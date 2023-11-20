@@ -30,6 +30,14 @@ function App() {
   const [timeDifficulty, setTimeDifficulty] = useState("20");
   const [burger, setBurger] = useState(false);
 
+  function handleChangeMode(e) {
+    setNext(true);
+    const element = reset;
+    setAnswersReturn(true);
+    element.current = false;
+    navigate(e.target.value);
+  }
+
   return (
     <div className={styles.appAllContainer}>
       <select
@@ -106,7 +114,7 @@ function App() {
       <div className={styles.appMenu}>
         <select
           className={styles.dropDownMenu}
-          onChange={(e) => navigate(e.target.value)}
+          onChange={(e) => handleChangeMode(e)}
         >
           <option value="">--Theme ?--</option>
           <option value="/images">Image</option>
@@ -127,7 +135,7 @@ function App() {
               <option value="20">medium (20s)</option>
               <option value="10">hard (10s)</option>
             </select>
-            <select onChange={(e) => navigate(e.target.value)}>
+            <select onChange={(e) => handleChangeMode(e)}>
               <option value="">--Theme ?--</option>
               <option value="/images">Image</option>
               <option value="/synopsis">Synopsis</option>
