@@ -27,6 +27,19 @@
   @include font;
   margin: 1%;
 }
+.response{
+  @include font;
+  width: fit-content;
+  margin-left: 30%;
+ -webkit-text-stroke: 2px rgb(255, 255, 255);
+    //background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    //background-color: white;
+    border-radius: 5px;
+    font-size: 4rem;
+
+  
+  
+}
 body {
   @include backgroundStyle;
   background-image: url("./src/assets/bouboulesDesktop.png");

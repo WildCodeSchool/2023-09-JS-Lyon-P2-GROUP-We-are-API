@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import React, { useState, useRef } from "react";
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
@@ -6,6 +7,7 @@ import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
+
 
 function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
@@ -26,6 +28,12 @@ function App() {
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
+  function getColor() {
+    if (please === false) {
+      return "#03b309";
+    }
+    return "red";
+  }
 
   return (
     <div className={styles.appAllContainer}>
@@ -39,6 +47,7 @@ function App() {
           setPlease={setPlease}
         />
       ) : null}
+      <Outlet />
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header userId={userId} score={score} />
@@ -81,6 +90,7 @@ function App() {
               next={next}
             />
           ) : null}
+          <Outlet />
           <Answers
             setAnswersReturn={setAnswersReturn}
             answers={answers}
@@ -89,6 +99,16 @@ function App() {
             next={next}
             reset={reset}
           />
+          {next === true ? (
+            <p
+              className={styles.response}
+              style={{
+                color: getColor(),
+              }}
+            >
+              {film.original_title}
+            </p>
+          ) : null}
           {please === true ? (
             <p className={styles.retry}>Please retry</p>
           ) : null}
