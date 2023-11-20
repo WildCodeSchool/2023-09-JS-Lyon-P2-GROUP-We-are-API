@@ -30,6 +30,7 @@ function Api({
 
   Api.propTypes = {
     setAnswersReturn: PropTypes.func.isRequired,
+    setColor: PropTypes.func.isRequired,
     setFilm: PropTypes.func.isRequired,
     setPlease: PropTypes.func.isRequired,
     reset: PropTypes.exact({

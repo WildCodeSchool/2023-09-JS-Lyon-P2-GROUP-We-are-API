@@ -132,6 +132,7 @@ LogicAnswers.propTypes = {
   }),
   score: PropTypes.number.isRequired,
   setAnswersReturn: PropTypes.func.isRequired,
+  setColor: PropTypes.func.isRequired,
   setScore: PropTypes.func.isRequired,
   answers: PropTypes.string.isRequired,
   setCheck: PropTypes.func.isRequired,
