@@ -1,11 +1,11 @@
 @import "../../Utilities.scss";
 .form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
-  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
   width: 100%;
+  height: 20vh;
 }
 .input {
   width: 100%;
@@ -31,51 +31,17 @@
   font-size: 2rem;
   text-align: center;
   cursor: pointer;
-  margin-top: 10%;
-  margin-left: 10%;
   font-family: "Sniglet";
 }
 .ButtonContainer {
-  width: 110%;
-}
-.appAnswer {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-right: 10%;
-}
-.forme {
-  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5%;
+  gap: 5%;
 }
 
-@media screen and (max-width: 480px) {
-  .appAnswer {
-    margin-top: 9%;
-    width: 100%;
-  }
-  .form {
-    display: flex;
-  }
-  .BTtest {
-    height: 2rem;
-    width: 7rem;
-    border: none;
-    border-radius: 5px;
-    box-shadow: #7474d6 0px 3px 8px;
-    background-color: #7474d6;
-    color: rgb(255, 252, 252);
-    font-weight: 900;
-    font-size: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 10%;
-  }
-  .appAnswer {
-    margin-right: 0%;
-  }
-  .input {
-    width: 140%;
-  }
-  .ButtonContainer {
-    width: 140%;
-  }
+.forme {
+  width: 60%;
 }

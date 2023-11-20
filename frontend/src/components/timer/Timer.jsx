@@ -8,13 +8,9 @@ export default function Timer({ setNext, timeDifficulty }) {
   const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
     if (filled < 100 && isRunning) {
-      setTimeout(
-        () =>
-          setFilled(
-            (prev) => prev + (0.333 / parseInt(timeDifficulty, 10)) * 10
-          ),
-        chrono
-      );
+      setTimeout(() => {
+        setFilled((prev) => prev + (0.333 / parseInt(timeDifficulty, 10)) * 10);
+      }, chrono);
     } else {
       setFilled(0);
       setIsRunning(false);
@@ -35,20 +31,18 @@ export default function Timer({ setNext, timeDifficulty }) {
   };
 
   return (
-    <div>
-      <div className={styles.container}>
-        <p className={styles.chrono} id="chronos">
-          {Math.round(timeDifficulty - timeDifficulty * (filled / 100))}
-        </p>
-        <div className={styles.progressBar}>
-          <div
-            className={styles.fillBar}
-            style={{
-              width: `${filled}%`,
-              backgroundColor: getColor(),
-            }}
-          />
-        </div>
+    <div className={styles.container}>
+      <p className={styles.chrono} id="chronos">
+        {Math.round(timeDifficulty - timeDifficulty * (filled / 100))}
+      </p>
+      <div className={styles.progressBar}>
+        <div
+          className={styles.fillBar}
+          style={{
+            width: `${filled}%`,
+            backgroundColor: getColor(),
+          }}
+        />
       </div>
     </div>
   );

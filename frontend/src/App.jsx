@@ -1,10 +1,10 @@
+import { Outlet, useNavigate } from "react-router-dom";
 import React, { useState, useRef } from "react";
 import UserId from "./components/UserId/UserId";
 import styles from "./App.module.css";
 import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
-import Image from "./components/Image/Image";
 import Header from "./components/Header/Header";
 
 function App() {
@@ -26,7 +26,9 @@ function App() {
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
+  const navigate = useNavigate();
   const [timeDifficulty, setTimeDifficulty] = useState("20");
+  const [burger, setBurger] = useState(false);
 
   return (
     <div className={styles.appAllContainer}>
@@ -34,10 +36,10 @@ function App() {
         id={styles.difficulty}
         onChange={(e) => setTimeDifficulty(e.target.value)}
       >
-        <option value="">--Quelle difficulté ?--</option>
-        <option value="30">facile (30s)</option>
-        <option value="20">moyen (20s)</option>
-        <option value="10">difficile (10s)</option>
+        <option value="">--Difficulty ?--</option>
+        <option value="30">easy (30s)</option>
+        <option value="20">medium (20s)</option>
+        <option value="10">hard (10s)</option>
       </select>
       {answersReturn === true ? (
         <Api
@@ -51,26 +53,16 @@ function App() {
       ) : null}
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
-          <Header userId={userId} score={score} />
-          <div className={styles.divavatar}>
-            {selectedAvatar !== null && (
-              <img
-                className={styles.avatar}
-                src={selectedAvatar}
-                alt="Avatar sélectionné"
-              />
-            )}
-          </div>
+          <Header
+            userId={userId}
+            score={score}
+            selectedAvatar={selectedAvatar}
+          />
         </div>
         <div className={styles.appBody}>
           {film !== null ? (
-            <Image
-              film={film}
-              reset={reset}
-              userId={userId}
-              setNext={setNext}
-              next={next}
-              timeDifficulty={timeDifficulty}
+            <Outlet
+              context={[film, reset, userId, next, setNext, timeDifficulty]}
             />
           ) : (
             <p>loading</p>
@@ -110,6 +102,38 @@ function App() {
             />
           ) : null}
         </div>
+      </div>
+      <div className={styles.appMenu}>
+        <select
+          className={styles.dropDownMenu}
+          onChange={(e) => navigate(e.target.value)}
+        >
+          <option value="">--Theme ?--</option>
+          <option value="/images">Image</option>
+          <option value="/synopsis">Synopsis</option>
+        </select>
+        <button
+          id={styles.buttonBurger}
+          type="button"
+          onClick={() => setBurger((prevState) => !prevState)}
+        >
+          ?
+        </button>
+        {burger === true ? (
+          <div className={styles.burgerMenu}>
+            <select onChange={(e) => setTimeDifficulty(e.target.value)}>
+              <option value="">--difficulty ?--</option>
+              <option value="30">easy (30s)</option>
+              <option value="20">medium (20s)</option>
+              <option value="10">hard (10s)</option>
+            </select>
+            <select onChange={(e) => navigate(e.target.value)}>
+              <option value="">--Theme ?--</option>
+              <option value="/images">Image</option>
+              <option value="/synopsis">Synopsis</option>
+            </select>
+          </div>
+        ) : null}
       </div>
     </div>
   );

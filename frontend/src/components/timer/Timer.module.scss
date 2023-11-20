@@ -1,9 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10%;
-  position: absolute;
-  width: 45%;
+  width: 100%;
 }
 .chrono {
   width: 100%;
@@ -11,17 +9,11 @@
   font-size: 2rem;
   position: absolute;
   margin: 0;
+  left: 0;
+  right: 0;
 }
 .fillBar {
   width: 100%;
   height: 2rem;
   z-index: 1;
-}
-@media screen and (max-width: 480px) {
-  .container {
-    width: 90%;
-  }
-  #chronos {
-    margin-left: 0;
-  }
 }

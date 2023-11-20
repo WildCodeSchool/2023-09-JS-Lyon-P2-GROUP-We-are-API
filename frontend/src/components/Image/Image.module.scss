@@ -1,29 +1,11 @@
 @import "../../Utilities.scss";
 
-.TimerContainer {
-  width: 90%;
-  margin-right: 10%;
-  height: 70%;
-}
 .imgContainer {
-  width: 100%;
+  width: clamp (100px, 100%, 500px);
 }
 .appImg {
   width: 100%;
-  margin-right: 10%;
-  margin-bottom: -0.4%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 10px 5px 5px rgb(198, 198, 198);
-}
-@media screen and (max-width: 480px) {
-  .TimerContainer {
-    margin: 0;
-    width: 115%;
-    margin-top: 10%;
-  }
-  .appImg {
-    margin: 0;
-    width: 100%;
-  }
 }

@@ -31,12 +31,12 @@ body {
   right: 0;
   position: absolute;
   flex-direction: column;
-  width: 30%;
+  width: clamp(250px, 75%, 500px);
   height: 70%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #ffffff;
-  padding: 50px;
+  padding: 10px;
   text-align: center;
   margin: auto;
   z-index: 999;
@@ -48,10 +48,10 @@ body {
   background-color: #eee;
   padding: 12px;
   height: 3rem;
-  width: 15rem;
+  width: 80%;
   border-radius: 4px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 10%;
   font-family: "Sniglet";
 }
@@ -62,20 +62,12 @@ body {
 }
 
 .user-text {
-  margin: 0;
+  margin-top: 5%;
   font-family: "Sniglet";
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-family: "Sniglet";
 }
 .Avatar {
-  height: 70%;
-}
-.avatarDiv {
-  margin: -10%;
-}
-@media screen and (max-width: 480px) {
-  .user-container {
-    width: 50%;
-  }
+  width: 90%;
 }
