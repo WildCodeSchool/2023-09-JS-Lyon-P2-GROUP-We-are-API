@@ -45,7 +45,6 @@ function App() {
     }
     return "red";
   }
-
   return (
     <div className={styles.appAllContainer}>
       <select
