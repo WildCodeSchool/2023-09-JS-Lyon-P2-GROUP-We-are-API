@@ -31,6 +31,16 @@
   font-family: "Sniglet";
 }
 
+.response {
+  color: #7474d6;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Sniglet";
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
 body {
   background-size: cover;
   background-repeat: no-repeat;

@@ -38,6 +38,13 @@ function App() {
     navigate(e.target.value);
   }
 
+  function getColor() {
+    if (please === false) {
+      return "#03b309";
+    }
+    return "red";
+  }
+
   return (
     <div className={styles.appAllContainer}>
       <select
@@ -70,7 +77,7 @@ function App() {
         <div className={styles.appBody}>
           {film !== null ? (
             <Outlet
-              context={[film, reset, userId, next, setNext, timeDifficulty]}
+              context={[film, reset, userId, setNext, next, timeDifficulty]}
             />
           ) : (
             <p>loading</p>
@@ -100,7 +107,17 @@ function App() {
             next={next}
             reset={reset}
           />
-          {please === true ? (
+          {next === true ? (
+            <p
+              className={styles.response}
+              style={{
+                color: getColor(),
+              }}
+            >
+              {film.original_title}
+            </p>
+          ) : null}
+          {please === true && next !== true ? (
             <p className={styles.retry}>Please retry</p>
           ) : null}
           {userId === null || selectedAvatar === null ? (

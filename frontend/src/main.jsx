@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import Image from "./components/Image/Image";
+import Header from "./components/Header/Header";
 import App from "./App";
 import ImageComponent from "./components/ImageComponent/ImageComponent";
 import SynopsisComponent from "./components/SynopsisComponent/SynopsisComponent";
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
         element: <SynopsisComponent />,
       },
     ],
+  },
+  {
+    path: "/test",
+    element: <Image />,
+  },
+  {
+    path: "/test2",
+    element: <Header />,
   },
 ]);
 
