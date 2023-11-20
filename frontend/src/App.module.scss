@@ -26,14 +26,11 @@
 .retry {
   @include font;
 }
-.response{
+.response {
   @include font;
- -webkit-text-stroke: 0.5px rgb(255, 255, 255);
-    border-radius: 5px;
-    font-size: 2rem;
-
-  
-  
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 2rem;
 }
 body {
   @include backgroundStyle;
