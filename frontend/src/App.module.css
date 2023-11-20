@@ -1,8 +1,6 @@
 @font-face {
   font-family: "Sniglet";
-  src:
-    local("Sniglet"),
-    url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
+  src: local("Sniglet"), url("./fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
 }
 .avatar {
   height: 8rem;
@@ -31,6 +29,19 @@
   font-family: "Sniglet";
 }
 
+.response {
+  color: #7474d6;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Sniglet";
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 30%;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 4rem;
+}
+
 body {
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +49,7 @@ body {
   background-attachment: fixed;
   background-image: url("./src/assets/bouboulesDesktop.png");
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .dropDownMenu {
@@ -125,4 +136,4 @@ body {
     margin-bottom: 100%;
     text-align: center;
   }
-} /*# sourceMappingURL=App.module.css.map */
+}/*# sourceMappingURL=App.module.css.map */

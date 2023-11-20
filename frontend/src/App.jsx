@@ -26,6 +26,12 @@ function App() {
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
+  function getColor() {
+    if (please === false) {
+      return "#03b309";
+    }
+    return "red";
+  }
   const navigate = useNavigate();
   const [timeDifficulty, setTimeDifficulty] = useState("20");
   const [burger, setBurger] = useState(false);
@@ -59,6 +65,7 @@ function App() {
           setPlease={setPlease}
         />
       ) : null}
+      <Outlet />
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header
@@ -92,6 +99,7 @@ function App() {
               next={next}
             />
           ) : null}
+          <Outlet />
           <Answers
             setAnswersReturn={setAnswersReturn}
             answers={answers}
@@ -100,6 +108,16 @@ function App() {
             next={next}
             reset={reset}
           />
+          {next === true ? (
+            <p
+              className={styles.response}
+              style={{
+                color: getColor(),
+              }}
+            >
+              {film.original_title}
+            </p>
+          ) : null}
           {please === true ? (
             <p className={styles.retry}>Please retry</p>
           ) : null}
