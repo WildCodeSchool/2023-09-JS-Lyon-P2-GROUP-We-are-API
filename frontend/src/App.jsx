@@ -29,6 +29,7 @@ function App() {
   const navigate = useNavigate();
   const [timeDifficulty, setTimeDifficulty] = useState("20");
   const [burger, setBurger] = useState(false);
+  const [color, setColor] = useState(false);
 
   function handleChangeMode(e) {
     setNext(true);
@@ -39,7 +40,7 @@ function App() {
   }
 
   function getColor() {
-    if (please === false) {
+    if (color === true) {
       return "#03b309";
     }
     return "red";
@@ -64,6 +65,7 @@ function App() {
           setNext={setNext}
           reset={reset}
           setPlease={setPlease}
+          setColor={setColor}
         />
       ) : null}
       <div className={styles.appAll}>
@@ -97,6 +99,7 @@ function App() {
               setPlease={setPlease}
               setNext={setNext}
               next={next}
+              setColor={setColor}
             />
           ) : null}
           <Answers
