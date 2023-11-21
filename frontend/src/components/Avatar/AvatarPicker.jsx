@@ -16,7 +16,7 @@ function AvatarPicker({ setSelectedAvatar, onAvatarSelected }) {
 
   return (
     <div className={styles["avatar-selector"]}>
-      <h2>Choisissez votre avatar :</h2>
+      <h2 className={styles["text-avatar"]}>Choose your avatar :</h2>
       <div className={styles["avatar-list"]}>
         {avatarImages !== null && avatarImages.length > 0 ? (
           avatarImages.map((avatarUrl) => (
@@ -25,7 +25,7 @@ function AvatarPicker({ setSelectedAvatar, onAvatarSelected }) {
               key={avatarUrl}
               src={avatarUrl}
               alt={`Avatar ${avatarUrl}`}
-              className={styles["img-avatar"]}
+              className={styles.imgAvatar}
               onClick={() => handleAvatarClick(avatarUrl)}
             />
           ))

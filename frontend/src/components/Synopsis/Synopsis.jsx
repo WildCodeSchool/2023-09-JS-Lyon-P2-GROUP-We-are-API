@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import styles from "./Image.module.css";
 import Timer from "../timer/Timer";
+import styles from "./Synopsis.module.css";
 
-export default function Image({
+export default function Synopsis({
   film,
   reset,
   userId,
@@ -11,26 +11,24 @@ export default function Image({
   timeDifficulty,
 }) {
   return (
-    <div className={styles.imgContainer}>
-      <img
-        className={styles.appImg}
-        src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
-        alt="Film a trouver"
-      />
-      {reset.current === true && userId !== null && next === false ? (
-        <Timer setNext={setNext} timeDifficulty={timeDifficulty} />
-      ) : null}
+    <div>
+      <p className={styles.synopsisText}>{`${film.overview}`}</p>
+      <div>
+        {reset.current === true && userId !== null && next === false ? (
+          <Timer setNext={setNext} timeDifficulty={timeDifficulty} />
+        ) : null}
+      </div>
     </div>
   );
 }
 
-Image.defaultProps = {
+Synopsis.defaultProps = {
   film: { title: "Veuillez attendre votre film" },
   reset: {
     current: "waiting",
   },
 };
-Image.propTypes = {
+Synopsis.propTypes = {
   film: PropTypes.exact({
     title: PropTypes.string,
     backdrop_path: PropTypes.string,
@@ -49,9 +47,9 @@ Image.propTypes = {
   }),
   setNext: PropTypes.func.isRequired,
   next: PropTypes.func.isRequired,
-  timeDifficulty: PropTypes.number.isRequired,
   reset: PropTypes.exact({
     current: PropTypes.bool.isRequired,
   }),
+  timeDifficulty: PropTypes.string.isRequired,
   userId: PropTypes.func.isRequired,
 };

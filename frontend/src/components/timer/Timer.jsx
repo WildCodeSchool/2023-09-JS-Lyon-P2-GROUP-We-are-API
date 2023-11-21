@@ -1,50 +1,48 @@
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { useState, useRef } from "react";
 import styles from "./Timer.module.css";
 
-export default function Timer({ setNext }) {
-  const untime = 10000;
-  const seconde = useRef(untime);
-  const [progress, setProgress] = useState(0);
-
-  function decompte(chrono) {
-    setProgress((chrono / untime) * 100);
-    seconde.current = Math.round((untime - chrono) / 1000);
-  }
-  const test = window.requestAnimationFrame(decompte);
-  if (progress >= 100) {
-    window.cancelAnimationFrame(test);
-    setProgress(0);
-  } else if (seconde.current <= 0) {
-    window.cancelAnimationFrame(test);
-    setNext(true);
-  }
+export default function Timer({ setNext, timeDifficulty }) {
+  const chrono = 33.3;
+  const [filled, setFilled] = useState(0);
+  const [isRunning, setIsRunning] = useState(true);
+  useEffect(() => {
+    if (filled < 100 && isRunning) {
+      setTimeout(() => {
+        setFilled((prev) => prev + (0.333 / parseInt(timeDifficulty, 10)) * 10);
+      }, chrono);
+    } else {
+      setFilled(0);
+      setIsRunning(false);
+      setNext(true);
+    }
+  }, [filled, isRunning]);
   const getColor = () => {
-    if (progress < 40) {
+    if (filled < 40) {
       return "#2ecc71";
     }
-    if (progress < 70) {
+    if (filled < 70) {
       return "#ffa500";
     }
-    if (progress >= 70) {
+    if (filled >= 70) {
       return "#ff0000";
     }
     return "";
   };
 
   return (
-    <div>
-      <div>{seconde.current}</div>
-      <div className={styles.container}>
-        <div className={styles.progressBar}>
-          <div
-            className={styles.fillBar}
-            style={{
-              width: `${progress}%`,
-              backgroundColor: getColor(),
-            }}
-          />
-        </div>
+    <div className={styles.container}>
+      <p className={styles.chrono} id="chronos">
+        {Math.round(timeDifficulty - timeDifficulty * (filled / 100))}
+      </p>
+      <div className={styles.progressBar}>
+        <div
+          className={styles.fillBar}
+          style={{
+            width: `${filled}%`,
+            backgroundColor: getColor(),
+          }}
+        />
       </div>
     </div>
   );
@@ -52,4 +50,5 @@ export default function Timer({ setNext }) {
 
 Timer.propTypes = {
   setNext: PropTypes.func.isRequired,
+  timeDifficulty: PropTypes.number.isRequired,
 };

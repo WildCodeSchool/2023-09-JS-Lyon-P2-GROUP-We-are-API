@@ -1,51 +1,52 @@
 @import "../../Utilities.scss";
-
 .header {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
-  padding-top: 1.5rem;
 }
-
-.theUser,
-.theScore {
+.logoText {
+  font-size: 3rem;
   font-family: "Sniglet";
-  font-size: $fontSizeMain;
-  color: #202c55;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+  margin: 0;
 }
-
 .userAndScore {
   display: flex;
-  flex-direction: row;
+  width: 100%;
   justify-content: space-between;
-  margin: 0.5rem;
+  height: 10vh;
+  align-items: center;
 }
 
-.logoText {
-  margin: 1rem;
-  font-size: 3.5rem;
+#logo {
+  scale: 0.5;
+}
+.userInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (min-width: 480px) {
-  .theUser,
-  .theScore {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 2.2rem;
-  }
-  .userAndScore {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+.theUser {
+  font-size: 2rem;
+  font-family: "Sniglet";
+  color: #7474d6;
+  width: 30%;
+  text-align: center;
+}
+.theScore {
+  font-size: 2rem;
+  font-family: "Sniglet";
+  color: #7474d6;
+  width: 30%;
+  text-align: center;
+}
 
-  .header {
-    padding: 0;
-    margin: 0;
-  }
-
-  .logoText {
-    font-size: 3.8rem;
-    margin: 0;
-  }
+.avatar {
+  height: 100%;
 }

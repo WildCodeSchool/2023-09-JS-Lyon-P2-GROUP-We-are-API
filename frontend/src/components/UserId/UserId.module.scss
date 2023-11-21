@@ -24,10 +24,6 @@ body {
 }
 
 .user-container {
-  margin: 18vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   @include flexCenter;
   top: 0;
   bottom: 0;
@@ -35,12 +31,12 @@ body {
   right: 0;
   position: absolute;
   flex-direction: column;
-  width: 33vh;
-  height: 69vh;
+  width: clamp(250px, 75%, 500px);
+  height: 70%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #ffffff;
-  padding: 50px;
+  padding: 10px;
   text-align: center;
   margin: auto;
   z-index: 999;
@@ -49,13 +45,15 @@ body {
   background-color: #000000;
 }
 .user-Input {
-  margin-top: 10vh;
   background-color: #eee;
   padding: 12px;
   height: 3rem;
-  width: 10rem;
+  width: 80%;
   border-radius: 4px;
   text-align: center;
+  font-size: 2rem;
+  margin-top: 10%;
+  font-family: "Sniglet";
 }
 
 .user-Message {
@@ -64,22 +62,12 @@ body {
 }
 
 .user-text {
-  margin: 0;
+  margin-top: 5%;
+  font-family: "Sniglet";
   font-size: 1.5rem;
   text-align: center;
+  font-family: "Sniglet";
 }
-
-@media screen and (min-width: 1200px) {
-  .user-Message {
-    font-size: 1.6rem;
-  }
-  .user-text {
-    font-size: 2.5rem;
-  }
-}
-
 .Avatar {
-  margin: 2rem;
-  height: 10rem;
-  margin-left: 4rem;
+  width: 50%;
 }

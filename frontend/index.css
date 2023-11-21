@@ -1,0 +1,16 @@
+/*@media screen and (min-width: 2000px) {
+  html {
+    -moz-transform: scale(0.9, 0.9);
+    zoom: 0.9;
+    zoom: 90%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1999px) {
+  html {
+    -moz-transform: scale(0.75, 0.75);
+    zoom: 0.75;
+    zoom: 75%;
+  }
+}
+*/
